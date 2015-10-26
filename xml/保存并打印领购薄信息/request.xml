@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.BCLGBJBXX</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>4767c349556a477f8a906262aaef7d21</tran_seq>
+		<tran_date>20151020</tran_date>
+		<tran_time>114800008</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14400qydzs0</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>11301022300</value>
+		</expand>
+	</head>
+	<body><![CDATA[]]>
+	</body>
+</service>
+
+<taxML xsi:type="HXZGFP00006Request" bbh="String" xmlbh="String"
+	xmlmc="String"
+	xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_HXZG_FP_00006_Request_V1.0.xsd"
+	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<lgbffVO>
+		<fplgbuuid>1E83EAC51A2C0124E0537F000001504C</fplgbuuid>
+		<lcslid>1E83EAC51A2D0124E0537F000001504C</lcslid>
+		<djxh>10111309000126611897</djxh>
+		<fpglyxm></fpglyxm>
+		<fplgbhm>13090332027908X139915023482371</fplgbhm>
+		<slswjgDm>11309031200</slswjgDm>
+		<lrrDm>11309000397</lrrDm>
+		<xgrDm></xgrDm>
+		<sjgsdq>11309031200</sjgsdq>
+		<wszzrq>2015-10-20 11:48:08</wszzrq>
+		<sfzjhm>130903198003081218</sfzjhm>
+		<sfzjlxDm>201</sfzjlxDm>
+	</lgbffVO>
+	<lgbVO>
+		<fplgbuuid>1E83EC23B2E5002CE0537F00000165A6</fplgbuuid>
+		<djxh>10111309000126611897</djxh>
+		<swzjzlDm>08</swzjzlDm>
+		<swzjhm>13090332027908X</swzjhm>
+		<swzjglztDm>01</swzjglztDm>
+		<ffrq>2015-10-20 11:48:08</ffrq>
+		<yxqq></yxqq>
+		<yxqz></yxqz>
+		<lrrDm>11309000397</lrrDm>
+		<sjgsdq>11309031200</sjgsdq>
+		<fplgbhm>13090332027908X139915023482371</fplgbhm>
+	</lgbVO>
+	<hsxxVO>
+		<djxh>10111309000126611897</djxh>
+		<hdhs></hdhs>
+		<jxhs></jxhs>
+		<gshx></gshx>
+		<yjhs></yjhs>
+		<tphs>2</tphs>
+		<lyhs>2</lyhs>
+		<sjtbSj>2015-10-20 11:48:08</sjtbSj>
+		<sjgsdq>11309031200</sjgsdq>
+		<swjgDm>11309031200</swjgDm>
+		<lrrDm>11309000397</lrrDm>
+		<xgrDm>11309000397</xgrDm>
+	</hsxxVO>
+</taxML>

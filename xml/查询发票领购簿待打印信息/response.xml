@@ -1,0 +1,734 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.CXFPLGBDYXX</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq>
+		<tran_date>20120420</tran_date>
+		<tran_time>022034181</tran_time>
+		<rtn_code>0</rtn_code>
+		<rtn_msg>
+			<Code>000</Code>
+			<Message></Message>
+			<Reason></Reason>
+		</rtn_msg>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGFP05138Response" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><lgbdyxxVo><pzhdxxVOList/><lymxVOList/><tpmxVOList><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>B4EBAB1EF7C6D17A3D8CF3C4B75C73DF</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>DA236C1E19238ED8F998F2115A47D40B</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>EB2EC50D1630D0CAD31DB474C7EDE181</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>14E5EE42DF51CCB904AC83C7D7C213E1</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>AF10E56F0A64AB4D7CF31A14C758E1B0</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>75D8B59449D458333F694CCAF68B4209</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>7C3FE820946E4EF141404FCB4AA35B2A</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>258E449626B0990B0D6566805DEE020C</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>5CB0B7C4FFC98DDF4B5698987F3DF33F</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>4D270A36D71B9F64B16AF58180599ECC</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>BD75655E19AAAA436FEC1F4BA8299891</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>D8C393DBFE92A85083A72CB1DAD27BA4</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>CCA4AF3422E9CCD0902AEB9DCA92F8A3</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>CE2DEBA86132575B60F77390B08FCF1E</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>F7DB9E71429F782BB065112C6943928B</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>77145EA14E8E5D078AE905E4773DB9DD</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>BED268DF25433093D12A35F6A2CEE827</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>497B5968F828F002782A07B360E4DB37</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>DCE1557301A77F297F5DA32B2554D94B</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>7D7770830EE54518DD1F5CF8476DF28E</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>56B06D7FBAFBE9FAFF6DF65C1045E319</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>DDB03FC92F01F93B33B97670D1E48181</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>C24BE45CE8E25B53BA6C5960AFDDB12E</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>981F0AFDE01AAC411C5B6C5C90187FB6</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>69209EA94BBB7C61FC94194E8DEBA36E</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>18E991A37DD5607D897FA7015084A642</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>9284ABE2E2F1E2F7B2343665F894EDD7</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>0A2B7581F8FD72091EF828D1E34212C2</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>79339DAA6C9A0ABC3156F469764B27BC</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>DE833D2DDA3E18B100560285FAF698EB</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>8034B9F43E128202044C68DA773CBF1B</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>686562B18E2AAD9EE58BC30CA506CA6B</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>12FC647278A43C7397AFC5D13E4F86B2</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>286EFF908F1286B6681DC873AC92F71F</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分���</swjgmc><dylxDm>4</dylxDm><uuid>1911C8A304749326DB2E65BC3871F6DF</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-19 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>774766E9CA11C3DC9BE89D49D2B4D9C2</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-18 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>BDDDA22445F9033B9EA9123D14F7385E</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-18 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>CEF0D2D07A84938FC91EF36E0F82C472</uuid><phcd>0</phcd></tpmxVOListlb><tpmxVOListlb><sjgsdq xsi:nil="true"/><fpzlDm xsi:nil="true"/><fpzzhm xsi:nil="true"/><fpsl xsi:nil="true"/><fpqshm xsi:nil="true"/><fpDm xsi:nil="true"/><lrrDm xsi:nil="true"/><fptpmxuuid xsi:nil="true"/><xgrDm xsi:nil="true"/><fptpuuid xsi:nil="true"/><bs>0</bs><rq>2015-10-18 00:00:00</rq><swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc><dylxDm>4</dylxDm><uuid>F49D52600669BA86504E1E34EEFB93CB</uuid><phcd>0</phcd></tpmxVOListlb></tpmxVOList><yjjmxVOList/><gsshmxVOList/><jxmxVOList/><ljgpje>0.0</ljgpje></lgbdyxxVo></taxML>]]></body>
+</service>
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP05138Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<lgbdyxxVo>
+		<pzhdxxVOList />
+		<lymxVOList />
+		<tpmxVOList>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>B4EBAB1EF7C6D17A3D8CF3C4B75C73DF</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>DA236C1E19238ED8F998F2115A47D40B</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>EB2EC50D1630D0CAD31DB474C7EDE181</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>14E5EE42DF51CCB904AC83C7D7C213E1</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>AF10E56F0A64AB4D7CF31A14C758E1B0</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>75D8B59449D458333F694CCAF68B4209</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>7C3FE820946E4EF141404FCB4AA35B2A</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>258E449626B0990B0D6566805DEE020C</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>5CB0B7C4FFC98DDF4B5698987F3DF33F</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>4D270A36D71B9F64B16AF58180599ECC</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>BD75655E19AAAA436FEC1F4BA8299891</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>D8C393DBFE92A85083A72CB1DAD27BA4</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>CCA4AF3422E9CCD0902AEB9DCA92F8A3</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>CE2DEBA86132575B60F77390B08FCF1E</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>F7DB9E71429F782BB065112C6943928B</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>77145EA14E8E5D078AE905E4773DB9DD</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>BED268DF25433093D12A35F6A2CEE827</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>497B5968F828F002782A07B360E4DB37</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>DCE1557301A77F297F5DA32B2554D94B</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>7D7770830EE54518DD1F5CF8476DF28E</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>56B06D7FBAFBE9FAFF6DF65C1045E319</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>DDB03FC92F01F93B33B97670D1E48181</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>C24BE45CE8E25B53BA6C5960AFDDB12E</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>981F0AFDE01AAC411C5B6C5C90187FB6</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>69209EA94BBB7C61FC94194E8DEBA36E</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>18E991A37DD5607D897FA7015084A642</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>9284ABE2E2F1E2F7B2343665F894EDD7</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>0A2B7581F8FD72091EF828D1E34212C2</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>79339DAA6C9A0ABC3156F469764B27BC</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>DE833D2DDA3E18B100560285FAF698EB</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>8034B9F43E128202044C68DA773CBF1B</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>686562B18E2AAD9EE58BC30CA506CA6B</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>12FC647278A43C7397AFC5D13E4F86B2</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>286EFF908F1286B6681DC873AC92F71F</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分���</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>1911C8A304749326DB2E65BC3871F6DF</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-19 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>774766E9CA11C3DC9BE89D49D2B4D9C2</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-18 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>BDDDA22445F9033B9EA9123D14F7385E</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-18 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>CEF0D2D07A84938FC91EF36E0F82C472</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+			<tpmxVOListlb>
+				<sjgsdq xsi:nil="true" />
+				<fpzlDm xsi:nil="true" />
+				<fpzzhm xsi:nil="true" />
+				<fpsl xsi:nil="true" />
+				<fpqshm xsi:nil="true" />
+				<fpDm xsi:nil="true" />
+				<lrrDm xsi:nil="true" />
+				<fptpmxuuid xsi:nil="true" />
+				<xgrDm xsi:nil="true" />
+				<fptpuuid xsi:nil="true" />
+				<bs>0</bs>
+				<rq>2015-10-18 00:00:00</rq>
+				<swjgmc>沧州市运河区国家税务局第一税务分局</swjgmc>
+				<dylxDm>4</dylxDm>
+				<uuid>F49D52600669BA86504E1E34EEFB93CB</uuid>
+				<phcd>0</phcd>
+			</tpmxVOListlb>
+		</tpmxVOList>
+		<yjjmxVOList />
+		<gsshmxVOList />
+		<jxmxVOList />
+		<ljgpje>0.0</ljgpje>
+	</lgbdyxxVo>
+</taxML>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP05048Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<swjgkfkcVOList>
+		<swjgkfkcVOListlb>
+			<fpzlDm>000008101200</fpzlDm>
+			<sjgsdq xsi:nil="true" />
+			<fpkfDm>B7586209CB30338066F390E6C325E5E7</fpkfDm>
+			<fpzzhm>14718000</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>1300151320</fpDm>
+			<fpqshm>14716001</fpqshm>
+			<bs>2000</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid xsi:nil="true" />
+			<lrrDm xsi:nil="true" />
+			<fpztDm>20</fpztDm>
+			<xgrDm xsi:nil="true" />
+			<swjgDm xsi:nil="true" />
+			<mbfs>1.0</mbfs>
+			<kcfs>2000.0</kcfs>
+			<fpdmmc>增值税普通发票电脑版（二联）</fpdmmc>
+			<phcd>8</phcd>
+			<fpme>0.0</fpme>
+			<jldwDm>0610</jldwDm>
+			<fpzlmc>增值税普通发票（二联无金额限制版）</fpzlmc>
+			<je>0.0</je>
+			<fpxj>0.0</fpxj>
+			<fpjj>0.0</fpjj>
+			<yspc>1</yspc>
+		</swjgkfkcVOListlb>
+		<swjgkfkcVOListlb>
+			<fpzlDm>1130</fpzlDm>
+			<sjgsdq xsi:nil="true" />
+			<fpkfDm>B7586209CB30338066F390E6C325E5E7</fpkfDm>
+			<fpzzhm>02788000</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>1300144130</fpDm>
+			<fpqshm>02787163</fpqshm>
+			<bs>838</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid xsi:nil="true" />
+			<lrrDm xsi:nil="true" />
+			<fpztDm>20</fpztDm>
+			<xgrDm xsi:nil="true" />
+			<swjgDm xsi:nil="true" />
+			<mbfs>1.0</mbfs>
+			<kcfs>838.0</kcfs>
+			<fpdmmc>增值税专用发票中文三联电脑版</fpdmmc>
+			<phcd>8</phcd>
+			<fpme>0.0</fpme>
+			<jldwDm>0610</jldwDm>
+			<fpzlmc>增值税专用发票（中文三联无金额限制版）</fpzlmc>
+			<je>0.0</je>
+			<fpxj>0.0</fpxj>
+			<fpjj>0.0</fpjj>
+			<yspc>4</yspc>
+		</swjgkfkcVOListlb>
+		<swjgkfkcVOListlb>
+			<fpzlDm>113002400200</fpzlDm>
+			<sjgsdq xsi:nil="true" />
+			<fpkfDm>B7586209CB30338066F390E6C325E5E7</fpkfDm>
+			<fpzzhm>33684000</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>113001424220</fpDm>
+			<fpqshm>33683027</fpqshm>
+			<bs>974</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid xsi:nil="true" />
+			<lrrDm xsi:nil="true" />
+			<fpztDm>20</fpztDm>
+			<xgrDm xsi:nil="true" />
+			<swjgDm xsi:nil="true" />
+			<mbfs>1.0</mbfs>
+			<kcfs>974.0</kcfs>
+			<fpdmmc>河北省国家税务局通用机打发票（B）</fpdmmc>
+			<phcd>8</phcd>
+			<fpme>0.0</fpme>
+			<jldwDm>0610</jldwDm>
+			<fpzlmc>通用机打发票(B)(二联无金额限制版·190mm×101.6mm)</fpzlmc>
+			<je>0.0</je>
+			<fpxj>0.0</fpxj>
+			<fpjj>0.18</fpjj>
+			<yspc>1</yspc>
+		</swjgkfkcVOListlb>
+		<swjgkfkcVOListlb>
+			<fpzlDm>113004100360</fpzlDm>
+			<sjgsdq xsi:nil="true" />
+			<fpkfDm>B7586209CB30338066F390E6C325E5E7</fpkfDm>
+			<fpzzhm>03107500</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>113001542010</fpDm>
+			<fpqshm>03106876</fpqshm>
+			<bs>25</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid xsi:nil="true" />
+			<lrrDm xsi:nil="true" />
+			<fpztDm>20</fpztDm>
+			<xgrDm xsi:nil="true" />
+			<swjgDm xsi:nil="true" />
+			<mbfs>25.0</mbfs>
+			<kcfs>625.0</kcfs>
+			<fpdmmc>河北省国家税务局通用手工发票（E）</fpdmmc>
+			<phcd>8</phcd>
+			<fpme>999.0</fpme>
+			<jldwDm>0612</jldwDm>
+			<fpzlmc>通用手工发票(E)(三联百元版·190mm×105mm)</fpzlmc>
+			<je>0.0</je>
+			<fpxj>0.0</fpxj>
+			<fpjj>0.0</fpjj>
+			<yspc>1</yspc>
+		</swjgkfkcVOListlb>
+	</swjgkfkcVOList>
+</taxML>
