@@ -4,11 +4,14 @@ package cn.gov.chinatax.hxzg.spec;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Logger;
+
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
 import javax.xml.ws.WebServiceClient;
 import javax.xml.ws.WebServiceFeature;
+
+import net.easyunion.common.util.PropertiesUtil;
 
 
 /**
@@ -17,7 +20,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "Gt3AipWebService", targetNamespace = "http://www.chinatax.gov.cn/spec/", wsdlLocation = "http://75.12.64.70:8201/Gt3AipWebService")
+@WebServiceClient(name = "Gt3AipWebService", targetNamespace = "http://www.chinatax.gov.cn/spec/", wsdlLocation = "http://79.12.65.35:8301/Gt3AipWebService")
 public class Gt3AipWebService_Service
     extends Service
 {
@@ -26,13 +29,14 @@ public class Gt3AipWebService_Service
     private final static Logger logger = Logger.getLogger(Gt3AipWebService_Service.class.getName());
 
     static {
+    	String u = PropertiesUtil.getInstance().getProperties("http.url");
         URL url = null;
         try {
             URL baseUrl;
             baseUrl = Gt3AipWebService_Service.class.getResource(".");
-            url = new URL(baseUrl, "http://75.12.64.70:8201/Gt3AipWebService");
+            url = new URL(baseUrl, u);
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://75.12.64.70:8201/Gt3AipWebService', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: '"+u+"', retrying as a local file");
             logger.warning(e.getMessage());
         }
         GT3AIPWEBSERVICE_WSDL_LOCATION = url;

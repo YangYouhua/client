@@ -32,20 +32,23 @@ public class Gt3WebServiceUtil {
 	 */
 	public static String sendWebService(String xml) throws Exception{
 		
-		String httpUrl = PropertiesUtil.getInstance().getProperties("http.url");
-		System.out.println(httpUrl);
-		URL wsdlURL = EntranceWebserviceService.WSDL_LOCATION;
-		wsdlURL = new URL(httpUrl);
-        EntranceWebserviceService ss = new EntranceWebserviceService(wsdlURL, SERVICE_NAME);
-        IEntranceWebservice port = ss.getEntranceWebservicePort();  
-        String _requestService__return = port.requestService("XML-NF", xml);
-		return _requestService__return;
-		
-//		Gt3AipWebService_Service service = new Gt3AipWebService_Service();
-//		Gt3AipWebService target = service.getGt3AipWebServicePort();
-//		String request = new String(xml.getBytes(),"utf-8");
-//		String rtn = target.sendBaseXMLEsbWebService(request);	
-//		return rtn;
+		String channelType = PropertiesUtil.getInstance().getProperties("channel.sy");
+		if("true".equals(channelType)){
+			String httpUrl = PropertiesUtil.getInstance().getProperties("http.url");
+			System.out.println(httpUrl);
+			URL wsdlURL = EntranceWebserviceService.WSDL_LOCATION;
+			wsdlURL = new URL(httpUrl);
+	        EntranceWebserviceService ss = new EntranceWebserviceService(wsdlURL, SERVICE_NAME);
+	        IEntranceWebservice port = ss.getEntranceWebservicePort();  
+	        String _requestService__return = port.requestService("XML-NF", xml);
+			return _requestService__return;
+		}else{
+			Gt3AipWebService_Service service = new Gt3AipWebService_Service();
+			Gt3AipWebService target = service.getGt3AipWebServicePort();
+			String request = new String(xml.getBytes(),"utf-8");
+			String rtn = target.sendBaseXMLEsbWebService(request);	
+			return rtn;
+		}
 	}
 	/**
 	 * 请求税友webservice

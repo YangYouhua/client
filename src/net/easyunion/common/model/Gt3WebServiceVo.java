@@ -93,11 +93,14 @@ public class Gt3WebServiceVo {
 	
 	public String getDoc(){
 		
+		String channelId = PropertiesUtil.getInstance().getProperties("jssq.channelId");
+		String sjry = PropertiesUtil.getInstance().getProperties("jssq.sjry");
+		
 		String strXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 				+"<service xmlns=\"http://www.chinatax.gov.cn/spec/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">"
 				+"	<head>"
 				+"		<tran_id>"+this.getTranId()+"</tran_id>"
-				+"		<channel_id>HEGS.NFWB.WCPT</channel_id>"
+				+"		<channel_id>"+channelId+"</channel_id>"
 				+"		<tran_seq>"+UUIDUtil.getUUID()+"</tran_seq>"
 				+"		<tran_date>"+DateUtils.formatDateToString(new Date(), "yyyyMMdd")+"</tran_date>"
 				+"		<tran_time>"+DateUtils.formatDateToString(new Date(), "hhmmsssss")+"</tran_time>"
@@ -107,7 +110,7 @@ public class Gt3WebServiceVo {
 				+"		</expand>"
 				+"		<expand>"
 				+"			<name>sjry</name>"
-				+"			<value>14400qydzs0</value>"
+				+"			<value>"+sjry+"</value>"
 				+"		</expand>"
 				+"		<expand>"
 				+"			<name>sjjg</name>"

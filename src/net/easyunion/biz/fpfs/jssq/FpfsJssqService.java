@@ -194,8 +194,9 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 			
 			//获取购票信息
 			{
+				
 				logger.error("开始计算纳税人可购票数量================================");
-				List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");//获取结存信息
+				
 				logger.error("获取纳税人票种核定信息==================================");
 				Document hdDoc = GetNsrxxGprxx.send(djxh);//获取票种核定信息
 				vo = AnalyzeXml.analyzeJsDoc(hdDoc);
@@ -225,6 +226,13 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 						result.add(gpxx);
 						return result;
 					}
+					
+					logger.error("获取纳税人验旧过后结存信息==================================");
+					
+					jcxxDoc = GetNsrfpjc.send(djxh, "0");
+					vo = AnalyzeXml.analyzeJsDoc(jcxxDoc);
+					
+					List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");//获取结存信息
 					
 					//获取结存数量
 					if(jcList !=null && jcList.size()>0){
