@@ -222,6 +222,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 						gpxx.setFpDm("0");
 						gpxx.setFpQh("0");
 						gpxx.setKfsl(0L);
+						gpxx.setKgsl(0L);
 						gpxx.setJyxx("核定数量为零，不可领购发票，请联系税局人员！");
 						result.add(gpxx);
 						return result;
@@ -329,11 +330,11 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 			        fwskUrl = fwskUrl + "/FpfsJoin?rkdj=0.0&fsdj=0.0&gpfs=NET";
 			        logger.error("fwskUrl : " + fwskUrl);
 			        System.out.println("fwskUrl : " + fwskUrl);
-			        
+//			        
 			        String sCzymc = "ctais";
 			        String sFpzl = "";
-			        
-			        //防伪税控发票种类   P1 普通发票 YB 专票
+//			        
+//			        //防伪税控发票种类   P1 普通发票 YB 专票
 			        if(saveGpxxVo.getZppzDm().equals("1")){
 			        	sFpzl = "YB";
 			        }else{

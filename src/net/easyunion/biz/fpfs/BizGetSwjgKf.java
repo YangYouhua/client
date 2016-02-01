@@ -47,12 +47,16 @@ public class BizGetSwjgKf implements IBiz {
 			
 			String swjgDm =  DocTool.getChildValue(doc, 0, "swjgDm"); 
 			
+			logger.error("开始查询税务机关代码："+swjgDm+"，所拥有的发票柜台！");
+			
 			List<Map<String, Object>> resList = null;
 			if(Const.CTAIS.equals(channel)){
 				resList = fpfsCtaisService.getSwjgKf(swjgDm);
 			}else if(Const.JSSQ_HXZG.equals(channel)){
 				resList = fpfsJssqService.getSwjgKf(swjgDm);
 			}
+			
+			logger.error("查到柜台数为："+resList.size());
 			
 			vo.setResult(getResult(resList));
 			vo.setResCode(BizMsgCodeConst.ResCode.success.toString());

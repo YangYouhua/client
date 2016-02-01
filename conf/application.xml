@@ -142,8 +142,9 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<bean id="HttpInvokerBaseService" abstract="true"
 		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter" />
 
-
 	<!-- 自动检索service.xml后缀的文件，并且加载里面的远程服务调用接口类 -->
 	<import resource="**/*_service.xml" />
 	<import resource="**/biz_*.xml" />
+	
+<!-- 	<bean class="net.easyunion.jms.service.JmsService"></bean> -->
 </beans>

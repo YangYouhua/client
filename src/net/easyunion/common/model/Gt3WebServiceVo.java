@@ -106,7 +106,7 @@ public class Gt3WebServiceVo {
 				+"		<tran_time>"+DateUtils.formatDateToString(new Date(), "hhmmsssss")+"</tran_time>"
 				+"		<expand>"
 				+"			<name>identityType</name>"
-				+"			<value>3327006290056</value>"
+				+"			<value>"+channelId+"</value>"
 				+"		</expand>"
 				+"		<expand>"
 				+"			<name>sjry</name>"

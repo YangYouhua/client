@@ -1,11 +1,12 @@
 package net.easyunion.biz.fpfs.jssq.send;
 
 import net.easyunion.common.model.Gt3WebServiceVo;
-import net.easyunion.common.util.AnalyzeXml;
 import net.easyunion.common.util.DocTool;
 import net.easyunion.common.vo.TranIdVo;
 import net.easyunion.common.webservice.Gt3WebServiceUtil;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 /**
@@ -14,6 +15,8 @@ import org.w3c.dom.Document;
  *
  */
 public class GetNsrxxGprxx {
+	
+	private final static Logger logger = LoggerFactory.getLogger(GetNsrxxGprxx.class);
 	
 	/**
 	 * 请求webservice
@@ -27,7 +30,9 @@ public class GetNsrxxGprxx {
 		try {
 			System.out.println(vo.getDoc());
 			res = Gt3WebServiceUtil.sendWebService(vo.getDoc());
+			logger.error("返回报文："+res);
 		} catch (Exception e) {
+			logger.error(e.toString()+e.getMessage());
 			e.printStackTrace();
 		}
 		return DocTool.getDocument(res);
