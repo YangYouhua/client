@@ -341,7 +341,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 			        	sFpzl = "P1";
 			        }
 			        String fwskSwjgDm = saveGpxxVo.getFwskSwjgDm().substring(0, saveGpxxVo.getFwskSwjgDm().length()-2);
-			        String postData = "1AND" + saveGpxxVo.getNsrsbh() + "AND" + saveGpxxVo.getFpDm() + "AND" + fwskSwjgDm + "AND" + saveGpxxVo.getFpQh() + "AND" + saveGpxxVo.getFpZh() + "AND" + saveGpxxVo.getFs() + "AND" + sCzymc + "AND" + sFpzl;
+			        String postData = "1|@|" + saveGpxxVo.getNsrsbh() + "|@|" + saveGpxxVo.getFpDm() + "|@|" + fwskSwjgDm + "|@|" + saveGpxxVo.getFpQh() + "|@|" + saveGpxxVo.getFpZh() + "|@|" + saveGpxxVo.getFs() + "|@|" + sCzymc + "|@|" + sFpzl;
 			        
 			        System.out.println("postData: " + postData);
 			        

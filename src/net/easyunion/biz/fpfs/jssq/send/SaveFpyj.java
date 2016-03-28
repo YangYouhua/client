@@ -92,13 +92,9 @@ public class SaveFpyj {
 	public static String getFpyjjgDm(String fpkjqkDm){
 		if("10".equals(fpkjqkDm)){
 			return "1";
-		}else if("21".equals(fpkjqkDm)){
+		}else if("20".equals(fpkjqkDm)){
 			return "2";
-		}else if("22".equals(fpkjqkDm)){
-			return "3";
 		}else if("90".equals(fpkjqkDm)){
-			return "4";
-		}else if("30".equals(fpkjqkDm)){
 			return "9";
 		}else{
 			return "";

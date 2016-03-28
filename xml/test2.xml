@@ -3,9 +3,9 @@
 	<head>
 		<tran_id>SWZJ.HXZG.FP.BCFSXX</tran_id>
 		<channel_id>HEGS.NFWB.WCPT</channel_id>
-		<tran_seq>e882133fff0c427fa80382ff3e543ab2</tran_seq>
-		<tran_date>20160328</tran_date>
-		<tran_time>013900028</tran_time>
+		<tran_seq>accfd0c82b0748bfb49f7443b3c1ca0e</tran_seq>
+		<tran_date>20160322</tran_date>
+		<tran_time>041000031</tran_time>
 		<expand>
 			<name>identityType</name>
 			<value>3327006290056</value>
@@ -28,33 +28,33 @@
 	xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_HXZG_FP_00051_Request_V1.0.xsd"
 	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<lyVO>
-		<sjgsdq>11309820700</sjgsdq>
-		<djxh>10111309010000002127</djxh>
-		<fplyuuid>86dfde25438f462f8c7d0cfa8a011c85</fplyuuid>
-		<fpkfDm>BC466A10E78B3148ED9E59E9F7D745CB</fpkfDm>
+		<sjgsdq>11309020700</sjgsdq>
+		<djxh>10111309010000010272</djxh>
+		<fplyuuid>9e0dda2eed414a39b9dd645adc6f0882</fplyuuid>
+		<fpkfDm>B7586209CB30338066F390E6C325E5E7</fpkfDm>
 		<sfzjlxDm>100</sfzjlxDm>
-		<gprxm>宋艳群</gprxm>
-		<lrrDm>11309001906</lrrDm>
-		<slswjgDm>11309820700</slswjgDm>
-		<xgrDm>11309001906</xgrDm>
-		<slrq>2016-03-28</slrq>
-		<slrDm>11309001906</slrDm>
-		<sfzjhm>132903197301140316</sfzjhm>
+		<gprxm>康运华</gprxm>
+		<lrrDm>11309000347</lrrDm>
+		<slswjgDm>11309020700</slswjgDm>
+		<xgrDm>11309000347</xgrDm>
+		<slrq>2016-03-22</slrq>
+		<slrDm>11309000347</slrDm>
+		<sfzjhm>130923199109144328</sfzjhm>
 	</lyVO>
 	<mxVOList>
 		<mxVOListlb>
-			<sjgsdq>11309820700</sjgsdq>
+			<sjgsdq>11309020700</sjgsdq>
 			<fpzlDm>000008101200</fpzlDm>
-			<fpzzhm>14867152</fpzzhm>
-			<fpsl>33</fpsl>
-			<fplymxuuid>6ca7f48276f847f9a5a1829335864599</fplymxuuid>
+			<fpzzhm>14639797</fpzzhm>
+			<fpsl>5</fpsl>
+			<fplymxuuid>1a0d95a3b2e84c6da36b918f5afb7543</fplymxuuid>
 			<wtdkbz>N</wtdkbz>
-			<fpqshm>14867120</fpqshm>
-			<fpDm>1300151320</fpDm>
-			<fplyuuid>86dfde25438f462f8c7d0cfa8a011c85</fplyuuid>
-			<lrrDm>11309001906</lrrDm>
-			<xgrDm>11309001906</xgrDm>
-			<swjgDm>11309820700</swjgDm>
+			<fpqshm>14639793</fpqshm>
+			<fpDm>1300153320</fpDm>
+			<fplyuuid>9e0dda2eed414a39b9dd645adc6f0882</fplyuuid>
+			<lrrDm>11309000347</lrrDm>
+			<xgrDm>11309000347</xgrDm>
+			<swjgDm>11309020700</swjgDm>
 			<defpbz></defpbz>
 			<zppzDm>3</zppzDm>
 			<mbfs>1</mbfs>
@@ -62,26 +62,26 @@
 			<zkdklxDm></zkdklxDm>
 			<fplbDm>1</fplbDm>
 			<tdhyDm>00</tdhyDm>
-			<djxh>10111309010000002127</djxh>
+			<djxh>10111309010000010272</djxh>
 			<phcd>8</phcd>
-			<spryDm>11309001906</spryDm>
+			<spryDm>11309000347</spryDm>
 			<sprxm></sprxm>
-			<gprxm>宋艳群</gprxm>
-			<sprq>2016-03-28</sprq>
+			<gprxm>康运华</gprxm>
+			<sprq>2016-03-22</sprq>
 			<swryxm></swryxm>
 			<jldwDm>0610</jldwDm>
 			<fpzg></fpzg>
 			<fpdmmc>增值税普通发票（二联无金额限制版）</fpdmmc>
-			<uuid>5f9005af10054eef8a21c00d46a01971</uuid>
+			<uuid>53666fd335c844a0a0874946e99fff14</uuid>
 			<gptpsysl>0</gptpsysl>
 			<skbz>N</skbz>
-			<rq>2016-03-28</rq>
+			<rq>2016-03-22</rq>
 			<swjgmc></swjgmc>
 			<dylxDm></dylxDm>
-			<nsrsbh>130982L85966906</nsrsbh>
-			<nsrmc>任丘市老宋蔬菜店</nsrmc>
-			<bs>33</bs>
-			<lgsl>33</lgsl>
+			<nsrsbh>13092319910914432801</nsrsbh>
+			<nsrmc>沧州市新华区鑫达五金门市部</nsrmc>
+			<bs>5</bs>
+			<lgsl>5</lgsl>
 		</mxVOListlb>
 	</mxVOList>
 	<tgbz>N</tgbz>
