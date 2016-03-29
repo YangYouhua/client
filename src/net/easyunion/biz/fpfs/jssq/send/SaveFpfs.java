@@ -31,6 +31,8 @@ public class SaveFpfs {
 		Gt3WebServiceVo vo = new Gt3WebServiceVo();
 		vo.setResult(getXml(saveGpxxVo));
 		vo.setTranId(TranIdVo.BCFSXX );
+		vo.setSjjg(saveGpxxVo.getSwjgDm());
+		vo.setSjry(saveGpxxVo.getLrrDm());
 		String res = "";
 		try {
 			logger.error("===========请求" + TranIdVo.BCFPYJJXX  +" 开始。。。。");

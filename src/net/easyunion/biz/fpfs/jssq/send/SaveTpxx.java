@@ -31,6 +31,8 @@ public class SaveTpxx {
 		Gt3WebServiceVo vo = new Gt3WebServiceVo();
 		vo.setResult(getXml(tpxxVo));
 		vo.setTranId(TranIdVo.BCFPTKCZ );
+		vo.setSjjg(tpxxVo.getSwjgDm());
+		vo.setSjry(tpxxVo.getLrrDm());
 		String res = "";
 		try {
 			logger.error("===========请求" + TranIdVo.BCFPTKCZ  +" 开始。。。。");

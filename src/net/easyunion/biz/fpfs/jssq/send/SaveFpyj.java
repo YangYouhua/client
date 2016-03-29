@@ -31,6 +31,8 @@ public class SaveFpyj {
 		Gt3WebServiceVo vo = new Gt3WebServiceVo();
 		vo.setResult(getXml(bsxxVo));
 		vo.setTranId(TranIdVo.BCFPYJJXX );
+		vo.setSjjg(bsxxVo.getSwjgDm());
+		vo.setSjry(bsxxVo.getLrrDm());
 		String res = "";
 		try {
 			logger.error("===========请求" + TranIdVo.BCFPYJJXX  +" 开始。。。。");

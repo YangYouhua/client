@@ -2,9 +2,9 @@ package net.easyunion.common.model;
 
 import java.util.Date;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 import net.easyunion.common.util.Base64Util;
 import net.easyunion.common.util.DateUtils;
@@ -95,6 +95,13 @@ public class Gt3WebServiceVo {
 		
 		String channelId = PropertiesUtil.getInstance().getProperties("jssq.channelId");
 		String sjry = PropertiesUtil.getInstance().getProperties("jssq.sjry");
+		String sjjg = "11301022300";
+		if(StringUtils.isNotEmpty(this.getSjjg())){
+			sjjg = this.getSjjg();
+		}
+		if(StringUtils.isNotEmpty(this.getSjry())){
+			sjry = this.getSjry();
+		}
 		
 		String strXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 				+"<service xmlns=\"http://www.chinatax.gov.cn/spec/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">"
@@ -114,7 +121,7 @@ public class Gt3WebServiceVo {
 				+"		</expand>"
 				+"		<expand>"
 				+"			<name>sjjg</name>"
-				+"			<value>11301022300</value>"
+				+"			<value>"+sjjg+"</value>"
 				+"		</expand>"
 				+"	</head>"
 				+"	<body><![CDATA["+ this.getResult() +"]]></body>"
