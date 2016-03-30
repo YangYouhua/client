@@ -101,7 +101,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 				if(vo.isResult()){
 					final List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");
 					//取当前日期前4个月报税信息
-					for(int i=1;i<=3;i++){
+					for(int i=0;i<=3;i++){
 						Calendar cal = Calendar.getInstance();
 						cal.add(Calendar.MONTH, -i);
 						Date date = cal.getTime();
