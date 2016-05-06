@@ -479,8 +479,34 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 			ResultXmlVo resXml = AnalyzeXml.analyzeJsDoc(doc);
 			logger.error("==========查询纳税人信息接口返回值：" + resXml.isResult() + " , message :" + resXml.getMessage());
 			if(resXml.isResult()){
-				String djxh = DocTool.getChildValue(resXml.getDoc(), 0, "djxh");
-				String nsrmc = DocTool.getChildValue(resXml.getDoc(), 0, "nsrmc");
+				String djxh = "";
+				String nsrmc = "";
+				List<Map<String, Object>> nsrxxList = XmlUtil.getListMap(resXml.getDoc(), "nsrxxGridlb", "2");
+				if(nsrxxList.size()>1){
+					List<Map<String, Object>> resNsrxx = new ArrayList<Map<String, Object>>();
+					if(nsrxxList!=null && nsrxxList.size()>0){
+						for(Map<String, Object> map:nsrxxList){
+							int kzztdjlxDm = Integer.parseInt(map.get("kzztdjlxDm").toString());
+							if(kzztdjlxDm > 1000 && kzztdjlxDm <= 1120){
+								logger.error("匹配到一条数据符合：" + kzztdjlxDm);
+								resNsrxx.add(map);
+							}
+						}
+					}
+					logger.error("匹配到的数据总数为：" + resNsrxx.size());
+					if(resNsrxx.size() == 1){
+						djxh = resNsrxx.get(0).get("djxh").toString();
+						nsrmc = resNsrxx.get(0).get("nsrmc").toString();
+					}else{
+						logger.error("匹配到的数据长度超过1。。。。。。");
+						return new ArrayList<NsrxxVo>();
+					}
+				}else{
+					djxh = nsrxxList.get(0).get("djxh").toString();
+					nsrmc = nsrxxList.get(0).get("nsrmc").toString();
+				}
+				
+				
 				doc = GetNsrxxGprxx.send(djxh);//查询纳税人详细信息和购票人信息 
 				resXml = AnalyzeXml.analyzeJsDoc(doc);
 				logger.error("==========查询纳税人详细信息和购票人信息 接口返回值：" + resXml.isResult() + " , message :" + resXml.getMessage());
