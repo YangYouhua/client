@@ -35,6 +35,7 @@ import java.util.Map;
 
 
 
+
 import oracle.jdbc.OracleTypes;
 
 import org.apache.commons.lang.StringUtils;
@@ -69,6 +70,7 @@ import net.easyunion.biz.fpfs.vo.TpxxVo;
 import net.easyunion.biz.fpfs.vo.YjResultVo;
 import net.easyunion.common.service.BaseService;
 import net.easyunion.common.util.AnalyzeXml;
+import net.easyunion.common.util.DateUtils;
 import net.easyunion.common.util.DocTool;
 import net.easyunion.common.util.HttpToolKit;
 import net.easyunion.common.util.PropertiesUtil;
@@ -204,18 +206,51 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					long hdSl = 0L;//核定数量
 					long jcSl = 0L;//结存数量
 					long kcSl = 0L;//库房数量
+					long lySl = 0L;//本月已领数量
+					long ykgSl = 0L;
 					
 					//获取核定数量
 					List<Map<String, Object>> hdList = XmlUtil.getListMap(vo.getDoc(), "fpPzhdxxGridlb", "2");
 					if(hdList!=null && hdList.size()>0){
 						for(Map<String, Object> map:hdList){
 							if(fpzlDm.equals(map.get("fpzlDm").toString())){
-								hdSl = getFpFs(map.get("myzggpsl").toString());
+								hdSl = getFpFs(map.get("mczggpsl").toString());
+								ykgSl = getFpFs(map.get("myzggpsl").toString());
 							}
 						}
 					}
 					
 					logger.error("纳税人核定数量为："+hdSl+"=============================");
+					
+					logger.error("获取纳税人本月已领票数==================================");
+					List<Map<String, Object>> lyList = this.getJdbcDao().find("select t2.* from fp_ly t1,FP_LY_MX t2 where t1.DJXH = '"+djxh+"' and t1.FPLYUUID = t2.FPLYUUID  and t1.SLRQ>=to_date('"+DateUtils.formatDateToString(new Date(), "yyyy-MM")+"','yyyy-mm')");
+					if(lyList !=null && lyList.size()>0){
+						for(Map<String, Object> map:lyList){
+							long sl = Long.parseLong(map.get("FPSL").toString());
+							lySl = lySl + sl;
+						}
+					}
+					logger.error("纳税人本月已领数量为：" + lySl + "========================");
+					if(lySl > 0){
+						long res = 0L;
+						if(lySl >= ykgSl){
+							GpxxVo gpxx = new GpxxVo();
+							gpxx.setFpDm("0");
+							gpxx.setFpQh("0");
+							gpxx.setKfsl(0L);
+							gpxx.setKgsl(0L);
+							gpxx.setJyxx("本月可购数量为0！");
+							result.add(gpxx);
+							return result;
+						}else{
+							res = ykgSl - lySl;
+						}
+						if(res < hdSl){
+							hdSl = res;
+						}
+					}
+					
+					logger.error("计算后纳税人核定数量为："+hdSl+"================================");
 					
 					if(hdSl <= 0){
 						GpxxVo gpxx = new GpxxVo();
