@@ -207,7 +207,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					long jcSl = 0L;//结存数量
 					long kcSl = 0L;//库房数量
 					long lySl = 0L;//本月已领数量
-					long ykgSl = 0L;
+					long ykgSl = 0L;//每月最大购票数量
 					
 					//获取核定数量
 					List<Map<String, Object>> hdList = XmlUtil.getListMap(vo.getDoc(), "fpPzhdxxGridlb", "2");
@@ -230,38 +230,9 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 							lySl = lySl + sl;
 						}
 					}
+					
 					logger.error("纳税人本月已领数量为：" + lySl + "========================");
-					if(lySl > 0){
-						long res = 0L;
-						if(lySl >= ykgSl){
-							GpxxVo gpxx = new GpxxVo();
-							gpxx.setFpDm("0");
-							gpxx.setFpQh("0");
-							gpxx.setKfsl(0L);
-							gpxx.setKgsl(0L);
-							gpxx.setJyxx("本月可购数量为0！");
-							result.add(gpxx);
-							return result;
-						}else{
-							res = ykgSl - lySl;
-						}
-						if(res < hdSl){
-							hdSl = res;
-						}
-					}
 					
-					logger.error("计算后纳税人核定数量为："+hdSl+"================================");
-					
-					if(hdSl <= 0){
-						GpxxVo gpxx = new GpxxVo();
-						gpxx.setFpDm("0");
-						gpxx.setFpQh("0");
-						gpxx.setKfsl(0L);
-						gpxx.setKgsl(0L);
-						gpxx.setJyxx("核定数量为零，不可领购发票，请联系税局人员！");
-						result.add(gpxx);
-						return result;
-					}
 					
 					logger.error("获取纳税人验旧过后结存信息==================================");
 					
@@ -283,7 +254,8 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					
 					String fpDm = "";
 					String fpQh = "";
-					long canSl = 0L;
+					long canSl = 0L;//可购发票数量
+					
 					ResultXmlVo kfxxVo = AnalyzeXml.analyzeJsDoc(QueryGtkcxx.send(djxh, null, fpkfDm, null));//查询柜台库存信息
 					logger.error("fpdm:"+fpdm+",fpzlDm:"+fpzlDm+",开始匹配库存信息=========================");
 					if(kfxxVo.isResult()){
@@ -309,18 +281,52 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					
 					logger.error("库房数量："+kcSl+",发票代码："+fpDm+",发票起号："+fpQh+"============================");
 					
+					
+					
+					
+					if(lySl > 0){
+						long res = 0L;
+						if(lySl >= ykgSl){
+							GpxxVo gpxx = new GpxxVo();
+							gpxx.setFpDm("0");
+							gpxx.setFpQh("0");
+							gpxx.setKfsl(0L);
+							gpxx.setKgsl(0L);
+							gpxx.setJyxx("本月可购数量为0！");
+							result.add(gpxx);
+							return result;
+						}else{
+							res = ykgSl - lySl;
+						}
+						if(res < hdSl){
+							hdSl = res;
+						}
+					} 
+					
+					logger.error("计算后纳税人核定数量为："+hdSl+"================================");
+					
+					if(hdSl <= 0){
+						GpxxVo gpxx = new GpxxVo();
+						gpxx.setFpDm("0");
+						gpxx.setFpQh("0");
+						gpxx.setKfsl(0L);
+						gpxx.setKgsl(0L);
+						gpxx.setJyxx("核定数量为零，不可领购发票，请联系税局人员！");
+						result.add(gpxx);
+						return result;
+					}
+					
+					
+					
 					GpxxVo gpxxVo = new GpxxVo();
 					gpxxVo.setFpDm(fpDm);
 					gpxxVo.setKfsl(kcSl);
 					gpxxVo.setFpQh(fpQh);
-					if(hdSl >= jcSl){
-						if(hdSl - jcSl > kcSl){
-							canSl = kcSl;
-						}else{
-							canSl = hdSl - jcSl;
-						}
+					
+					if(hdSl >= kcSl){
+						canSl = kcSl;
 					}else{
-						gpxxVo.setJyxx("可够数量为0，暂时不能购票！");
+						canSl = hdSl;
 					}
 					
 					logger.error("计算后纳税人可购票数量为："+canSl+"======================================");
