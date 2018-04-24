@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP00275Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<swjgkfkcGrid>
+		<swjgkfkcGridlb>
+			<fpzlDm>000008101200</fpzlDm>
+			<sjgsdq>11309030200</sjgsdq>
+			<fpkfDm>4E1C3CA8D56F1043DDD66BC6F0FCB76C</fpkfDm>
+			<fpzzhm>00234666</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>1300054620</fpDm>
+			<fpqshm>00234567</fpqshm>
+			<bs>100</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid>0520E86702E3F2A6B0FCEDED482519D5</kfkcuuid>
+			<lrrDm>11309000515</lrrDm>
+			<fpztDm>20</fpztDm>
+			<xgrDm>11309000425</xgrDm>
+			<swjgDm>11309030200</swjgDm>
+		</swjgkfkcGridlb>
+	</swjgkfkcGrid>
+</taxML>

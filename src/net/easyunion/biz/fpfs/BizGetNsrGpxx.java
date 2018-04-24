@@ -91,7 +91,9 @@ private final static Logger logger = LoggerFactory.getLogger(BizGetNsrGpxx.class
 				result.append("<kfsl>").append(vo.getKfsl()).append("</kfsl>");
 				result.append("<fpQh>").append(vo.getFpQh()).append("</fpQh>");
 				result.append("<jyxx>").append(vo.getJyxx()).append("</jyxx>");
-				
+				result.append("<lysl>").append(vo.getLySl()).append("</lysl>");
+				result.append("<ykgSl>").append(vo.getYkgSl()).append("</ykgSl>");
+				result.append("<jcSl>").append(vo.getJcSl()).append("</jcSl>");
 				result.append("</gpxx>");
 			}
 		}

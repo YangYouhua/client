@@ -1,0 +1,26 @@
+package net.easyunion.biz.fpfs;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import net.easyunion.biz.fpfs.jssq.FpfsJssqService;
+
+public class BizGetDjxh{
+	
+	private final static Logger logger = LoggerFactory.getLogger(BizGetDjxh.class);
+	
+	@Resource
+	private FpfsJssqService fpfsJssqService;
+	
+	public List<Map<String, Object>> getDjxh(String djxh) {
+		
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		list = fpfsJssqService.getDjxh(djxh);
+		
+		return list;
+	}
+
+}

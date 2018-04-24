@@ -1,0 +1,28 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.BCFSXX</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>e882133fff0c427fa80382ff3e543ab2</tran_seq>
+		<tran_date>20160328</tran_date>
+		<tran_time>013900028</tran_time>
+		<rtn_code>3</rtn_code>
+		<rtn_msg>
+			<Code>000</Code>
+			<Message>系统内部异常</Message>
+			<Reason>调用系统服务出错,异常所在server名hxhd_hest_svr001，异常原因：1010410002000018:该操作人员无领用柜台，请设置</Reason>
+		</rtn_msg>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14400qydzs0</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>11301022300</value>
+		</expand>
+	</head>
+	<body></body>
+</service>

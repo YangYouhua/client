@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<head>
+		<!-- 业务id -->
 		<tran_id>SWZJ.HXZG.FP.BCFPTKCZ</tran_id>
+		<!-- 业务通道（金税三期、ctais-中国税收征管系统） -->
 		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<!-- 业务流水号 -->
 		<tran_seq>ebaa193341b445dcbfefd533b7b37cd0</tran_seq>
+		<!-- 业务请求日期 -->
 		<tran_date>20151018</tran_date>
 		<tran_time>083100024</tran_time>
 		<expand>
 			<name>identityType</name>
 			<value>3327006290056</value>
 		</expand>
+		<!-- 税局人员 -->
 		<expand>
 			<name>sjry</name>
 			<value>14400qydzs0</value>
 		</expand>
+		<!-- 税局机构 -->
 		<expand>
 			<name>sjjg</name>
 			<value>11301022300</value>

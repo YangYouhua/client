@@ -12,10 +12,32 @@ public class GpxxVo implements Serializable{
 	private String fpDm;
 	private Long kgsl;//可购数量
 	private Long kfsl;//库房数量
+	private Long lySl;//已购数量
+	private Long ykgSl;//每月最大购票数量
+	
 	private String fpQh;
 	private String jyxx = "";//校验信息，如果为为空则通过检查，否则失败
+	private Long jcSl;//结存数量
 	
 	
+	public Long getJcSl() {
+		return jcSl;
+	}
+	public void setJcSl(Long jcSl) {
+		this.jcSl = jcSl;
+	}
+	public Long getYkgSl() {
+		return ykgSl;
+	}
+	public void setYkgSl(Long ykgSl) {
+		this.ykgSl = ykgSl;
+	}
+	public Long getLySl() {
+		return lySl;
+	}
+	public void setLySl(Long lySl) {
+		this.lySl = lySl;
+	}
 	public String getFpDm() {
 		return fpDm;
 	}

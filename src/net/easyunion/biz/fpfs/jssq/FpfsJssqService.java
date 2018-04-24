@@ -12,30 +12,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import oracle.jdbc.OracleTypes;
 
 import org.apache.commons.lang.StringUtils;
@@ -50,20 +26,14 @@ import net.easyunion.biz.fpfs.IFpfsServie;
 import net.easyunion.biz.fpfs.jssq.send.GetNsrfpjc;
 import net.easyunion.biz.fpfs.jssq.send.GetNsrxx;
 import net.easyunion.biz.fpfs.jssq.send.GetNsrxxGprxx;
-import net.easyunion.biz.fpfs.jssq.send.Jyfstj;
 import net.easyunion.biz.fpfs.jssq.send.QueryGtkcxx;
 import net.easyunion.biz.fpfs.jssq.send.SaveFpfs;
 import net.easyunion.biz.fpfs.jssq.send.SaveFpyj;
-import net.easyunion.biz.fpfs.jssq.send.SaveLgb;
 import net.easyunion.biz.fpfs.jssq.send.SaveTpxx;
-import net.easyunion.biz.fpfs.jssq.send.query.QueryFpLgb;
-import net.easyunion.biz.fpfs.jssq.send.query.QueryFpLgbDyhs;
-import net.easyunion.biz.fpfs.jssq.send.query.QueryFplgbFF;
 import net.easyunion.biz.fpfs.vo.BsxxVo;
 import net.easyunion.biz.fpfs.vo.GpResultVo;
 import net.easyunion.biz.fpfs.vo.GpxxVo;
 import net.easyunion.biz.fpfs.vo.NsrxxVo;
-import net.easyunion.biz.fpfs.vo.PrintLgbVo;
 import net.easyunion.biz.fpfs.vo.SaveGpxxVo;
 import net.easyunion.biz.fpfs.vo.TpResultVo;
 import net.easyunion.biz.fpfs.vo.TpxxVo;
@@ -74,7 +44,6 @@ import net.easyunion.common.util.DateUtils;
 import net.easyunion.common.util.DocTool;
 import net.easyunion.common.util.HttpToolKit;
 import net.easyunion.common.util.PropertiesUtil;
-import net.easyunion.common.util.StringUtil;
 import net.easyunion.common.util.XmlUtil;
 import net.easyunion.common.vo.ResultXmlVo;
 
@@ -102,6 +71,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 				logger.error("===========请求获取纳税人结存信息接口 code:" +vo.isResult()+ "  message :" +vo.getMessage());
 				if(vo.isResult()){
 					final List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");
+					
 					//取当前日期前4个月报税信息
 					for(int i=0;i<=3;i++){
 						Calendar cal = Calendar.getInstance();
@@ -112,8 +82,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 						@SuppressWarnings("unchecked")
 						List<BsxxVo> lsBsxx = (List<BsxxVo>)this.getFwskDao().getJdbcTemplate().execute(new ConnectionCallback<Object>() {
 							@Override
-							public Object doInConnection(Connection conn)
-									throws SQLException, DataAccessException {
+							public Object doInConnection(Connection conn) throws SQLException, DataAccessException {
 								CallableStatement cst = conn.prepareCall("{?=call htjs.p_get_fwsk_bsxx(?,?,?,?)}");
 								cst.registerOutParameter(1, OracleTypes.NUMBER);
 								cst.setString(2, nsrsbh);
@@ -152,23 +121,27 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 										if (bsFpqh >= jcFpqh && bsFpzh <= jcFpzh && fpzlDm.equals(jczl)){
 											//获取发票种类代码
 											logger.error("此发票段在纳税人结存中存在，且是对应的发票种类.");
-											BsxxVo bsxx = new BsxxVo();
-											bsxx.setFpDm(rs.getString("AVC_FPDM"));
-											bsxx.setFpQh(rs.getString("AVC_FPQH"));
-											bsxx.setFpZh(rs.getString("AVC_FPZH"));
-											bsxx.setJe(rs.getFloat("AN_JE")+"");
-											bsxx.setSe(rs.getFloat("AN_SE")+"");
-											bsxx.setFptkzt(rs.getString("AC_FPTKZT"));
-											bsxx.setKprqQ(rs.getString("AVC_KPRQQ"));
-											bsxx.setKprqZ(rs.getString("AVC_KPRQZ"));
-											bsxx.setFs(rs.getInt("FS")+"");
-											bsxx.setNsrsbh(nsrsbh);
-											bsxx.setFpzlDm(fpzlDm);
-											bsxx.setLrrDm(lrrDm);
-											bsxx.setSwjgDm(swjgDm);
-											bsxx.setDjxh(djxh);
 											
-											_lsBsxx.add(bsxx);
+											//效验是否正常发票，只需要验旧正常发票，其他发票不需要验旧，湖南版本
+											if("10".equals(rs.getString("AC_FPTKZT"))){
+												BsxxVo bsxx = new BsxxVo();
+												bsxx.setFpDm(rs.getString("AVC_FPDM"));
+												bsxx.setFpQh(rs.getString("AVC_FPQH"));
+												bsxx.setFpZh(rs.getString("AVC_FPZH"));
+												bsxx.setJe(rs.getFloat("AN_JE")+"");
+												bsxx.setSe(rs.getFloat("AN_SE")+"");
+												bsxx.setFptkzt(rs.getString("AC_FPTKZT"));
+												bsxx.setKprqQ(rs.getString("AVC_KPRQQ"));
+												bsxx.setKprqZ(rs.getString("AVC_KPRQZ"));
+												bsxx.setFs(rs.getInt("FS")+"");
+												bsxx.setNsrsbh(nsrsbh);
+												bsxx.setFpzlDm(fpzlDm);
+												bsxx.setLrrDm(lrrDm);
+												bsxx.setSwjgDm(swjgDm);
+												bsxx.setDjxh(djxh);
+												
+												_lsBsxx.add(bsxx);
+											}
 												
 										}
 									}
@@ -183,11 +156,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 						logger.error("共找到" + lsBsxx.size() + "条需要验旧的记录");
 						//执行验旧
 						for (BsxxVo bsxxVo : lsBsxx) {
-							System.out.println("验旧信息:" + bsxxVo.toString());
-							logger.error("验旧信息:" + bsxxVo.toString());
 							YjResultVo ret = saveYjxx(bsxxVo);
-							System.out.println(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
-							logger.error(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
 						}
 					}
 				}
@@ -196,6 +165,16 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 			
 			//获取购票信息
 			{
+				//判断纳税人是否有领票权限
+				//1、判断地市
+				
+				//2、判断纳税人登记状态
+				
+				//3、判断纳税人领票权限
+				
+				
+				
+				
 				
 				logger.error("开始计算纳税人可购票数量================================");
 				
@@ -221,9 +200,9 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					}
 					
 					logger.error("纳税人核定数量为："+hdSl+"=============================");
-					
-					logger.error("获取纳税人本月已领票数==================================");
-					List<Map<String, Object>> lyList = this.getJdbcDao().find("select t2.* from fp_ly t1,FP_LY_MX t2 where t1.DJXH = '"+djxh+"' and t1.FPLYUUID = t2.FPLYUUID  and t1.SLRQ>=to_date('"+DateUtils.formatDateToString(new Date(), "yyyy-MM")+"','yyyy-mm')");
+					logger.error("每月最大购票数量："+ykgSl+"=============================");
+					//获取纳税人本月已领票数
+					List<Map<String, Object>> lyList = this.getJdbcDao().find("select t2.* from fp_ly t1,FP_LY_MX t2 where t1.DJXH = '"+djxh+"' and t1.FPLYUUID = t2.FPLYUUID  and t1.SLRQ>=to_date('"+DateUtils.formatDateToString(new Date(), "yyyy-MM")+"','yyyy-mm') and t2.FPZL_DM = '"+fpzlDm+"'");
 					if(lyList !=null && lyList.size()>0){
 						for(Map<String, Object> map:lyList){
 							long sl = Long.parseLong(map.get("FPSL").toString());
@@ -234,8 +213,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					logger.error("纳税人本月已领数量为：" + lySl + "========================");
 					
 					
-					logger.error("获取纳税人验旧过后结存信息==================================");
-					
+					//获取纳税人验旧过后结存信息
 					jcxxDoc = GetNsrfpjc.send(djxh, "0");
 					vo = AnalyzeXml.analyzeJsDoc(jcxxDoc);
 					
@@ -280,28 +258,20 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					}
 					
 					logger.error("库房数量："+kcSl+",发票代码："+fpDm+",发票起号："+fpQh+"============================");
-					
-					
-					
-					
-					if(lySl > 0){
-						long res = 0L;
+						
 						if(lySl >= ykgSl){
 							GpxxVo gpxx = new GpxxVo();
 							gpxx.setFpDm("0");
 							gpxx.setFpQh("0");
 							gpxx.setKfsl(0L);
 							gpxx.setKgsl(0L);
-							gpxx.setJyxx("本月可购数量为0！");
+							gpxx.setJyxx("本月已领购量超过月最大领购量，不能领购！");
 							result.add(gpxx);
+							logger.error("本月已领购量超过月最大可领购量，本月可购数量为0！");
 							return result;
 						}else{
-							res = ykgSl - lySl;
+							hdSl = hdSl - lySl;
 						}
-						if(res < hdSl){
-							hdSl = res;
-						}
-					} 
 					
 					logger.error("计算后纳税人核定数量为："+hdSl+"================================");
 					
@@ -313,6 +283,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 						gpxx.setKgsl(0L);
 						gpxx.setJyxx("核定数量为零，不可领购发票，请联系税局人员！");
 						result.add(gpxx);
+						logger.error("核定数量为零，不可领购发票，请联系税局人员！");
 						return result;
 					}
 					
@@ -322,7 +293,9 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					gpxxVo.setFpDm(fpDm);
 					gpxxVo.setKfsl(kcSl);
 					gpxxVo.setFpQh(fpQh);
-					
+					gpxxVo.setLySl(lySl);
+					gpxxVo.setYkgSl(ykgSl);
+					gpxxVo.setJcSl(jcSl);
 					if(hdSl >= kcSl){
 						canSl = kcSl;
 					}else{
@@ -361,7 +334,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 //				String swzjHm = lgbMap.get("SWZJHM").toString();
 //				String swzjglztDm = lgbMap.get("SWZJGLZT_DM").toString();
 //				String lgbUuid = lgbMap.get("FPLGBUUID").toString();
-				ResultXmlVo xmlVo = AnalyzeXml.analyzeJsDoc(SaveFpfs.send(saveGpxxVo));
+				ResultXmlVo xmlVo = AnalyzeXml.analyzeJsDoc(SaveFpfs.send(saveGpxxVo));//vo，大概是value object（值对象）的意思
 				logger.error("===============写入发票领购信息返回 Code："+xmlVo.isResult()+",message:"+xmlVo.getMessage());
 				if(xmlVo.isResult()){
 					logger.error("写入发票领购信息成功============================");
@@ -370,7 +343,7 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 					String fwskUrl = PropertiesUtil.getInstance().getProperties("fwsk.url");
 			        fwskUrl = fwskUrl + "/FpfsJoin?rkdj=0.0&fsdj=0.0&gpfs=NET";
 			        logger.error("fwskUrl : " + fwskUrl);
-			        System.out.println("fwskUrl : " + fwskUrl);
+			        
 //			        
 			        String sCzymc = "ctais";
 			        String sFpzl = "";
@@ -602,6 +575,61 @@ public class FpfsJssqService extends BaseService implements IFpfsServie {
 	@Override
 	public List<Map<String, Object>> getSwjgKf(String swjgDm) {
 		String sql = "select * from fp_fpkf where ssswjg_dm = '"+swjgDm+"'";
+		return this.getJdbcDao().find(sql);
+	}
+
+	@Override
+	public List<Map<String, Object>> getDjxh(String djxh) {
+		String sql = "select djxh from FZ_SJTZFSFPXXB where djxh = '"+djxh+"'";
+		return this.getJdbcDao().find(sql);
+	}
+	
+	@Override
+	public List<Map<String, Object>> getNsrzt(String djxh) {
+		String sql = "select nsrzt_dm from hx_dj.dj_nsrxx where djxh = '"+djxh+"'";
+		return this.getJdbcDao().find(sql);
+	}
+	
+	@Override
+	public List<Map<String, Object>> getFxnsr(String nsrsbh) {
+		String sql = "select fxnsrbz from htjs.ht_ybnsr_dab where nsrsbh = '"+nsrsbh+"'";
+		return this.getFwskDao().find(sql);
+	}
+	
+	@Override
+	public List<Map<String, Object>> getQsqy(String djxh) {
+		String sql = "select distinct djxh from hx_zs.zs_yjsf where jkqx < sysdate and rkrq is null and tzlx_dm in('1','4') and zsswjg_dm like '12301%' and djxh = '"+djxh+"'";
+		return this.getJdbcDao().find(sql);
+	}
+	
+	@Override
+	public List<Map<String, Object>> getWfwz(String nsrsbh) {
+		String sql = "select SSWFXWCLZT_DM from hx_FZ.fz_sswfxwdj where nsrsbh = '"+nsrsbh+"'";
+		return this.getJdbcDao().find(sql);
+	}
+
+	@Override
+	public String getNsrJcxx(String fpkfDm) {
+		 ResultXmlVo vo = null;
+		 String res = "";
+		 try {
+		      vo = AnalyzeXml.analyzeJsDoc(QueryGtkcxx.send(null, null, fpkfDm, null));
+
+		      List<Map<String, Object>> listMap = XmlUtil.getListMap(vo.getDoc(), "swjgkfkcVOListlb", "2");
+		      if ((listMap != null) && (listMap.size() > 0)) {
+		        for (Map<String, Object> map : listMap)
+		          res = res + "<swjgkfkcVOListlb><fpqshm>" + map.get("fpqshm") + "</fpqshm><fpzlDm>" + map.get("fpzlDm") + "</fpzlDm></swjgkfkcVOListlb>";
+		      }
+		 }
+		 catch (Exception e){
+		      e.printStackTrace();
+		 }
+		 return res;
+	}
+
+	@Override
+	public List<Map<String, Object>> getSmz(String nsrsbh) {
+		String sql = "select fddbrsfzjhm from hx_dj.dj_nsrxx where nsrsbh = '"+nsrsbh+"'";
 		return this.getJdbcDao().find(sql);
 	}
 

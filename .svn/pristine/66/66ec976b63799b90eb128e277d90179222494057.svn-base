@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP00279Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fpNsrfpjcVOList>
+		<fpNsrfpjcVOListlb>
+			<nsrjcuuid>93819C9F90478BA91FFD9975DA5886CC</nsrjcuuid>
+			<fpDm>1300054620</fpDm>
+			<xgrq>2015-10-17 20:10:26</xgrq>
+			<fpzzhm>00234576</fpzzhm>
+			<fpztDm>20</fpztDm>
+			<swjgDm>11309030700</swjgDm>
+			<djxh>10111309000126611897</djxh>
+			<fpqshm>00234567</fpqshm>
+			<fpzlDm>000008101200</fpzlDm>
+			<fs>10.0</fs>
+			<lrrDm>11309000425</lrrDm>
+			<xgrDm xsi:nil="true" />
+			<sjgsdq>11309030000</sjgsdq>
+			<lrrq>2015-10-17 20:10:26</lrrq>
+			<zgswskfjDm>11309030000</zgswskfjDm>
+			<fpzlmc>增值税普通发票（二联无金额限制版）</fpzlmc>
+			<fpdmmc>增值税普通发票电脑版（二联）</fpdmmc>
+			<phcd>8</phcd>
+			<jldwDm>0610</jldwDm>
+			<wtdkbz>N</wtdkbz>
+			<defpbz>N</defpbz>
+			<zppzDm>3</zppzDm>
+			<fpgpfsDm>1</fpgpfsDm>
+			<fpme>0.0</fpme>
+			<mbfs>1.0</mbfs>
+			<kpje>0.0</kpje>
+			<fplbDm>8</fplbDm>
+			<tdhyDm>01</tdhyDm>
+			<skbz>N</skbz>
+			<defpxebz>N</defpxebz>
+			<yspc>4</yspc>
+		</fpNsrfpjcVOListlb>
+		<fpNsrfpjcVOListlb>
+			<nsrjcuuid>1E83EAC7458D01CAE0537F0000010064</nsrjcuuid>
+			<fpDm>1300151320</fpDm>
+			<xgrq>2015-08-12 08:22:24</xgrq>
+			<fpzzhm>14438167</fpzzhm>
+			<fpztDm>20</fpztDm>
+			<swjgDm>11309031200</swjgDm>
+			<djxh>10111309000126611897</djxh>
+			<fpqshm>14438158</fpqshm>
+			<fpzlDm>000008101200</fpzlDm>
+			<fs>10.0</fs>
+			<lrrDm>11309000408</lrrDm>
+			<xgrDm>11309000408</xgrDm>
+			<sjgsdq>11309031200</sjgsdq>
+			<lrrq>2015-08-12 08:22:05</lrrq>
+			<zgswskfjDm>11309031200</zgswskfjDm>
+			<fpzlmc>增值税普通发票（二联无金额限制版）</fpzlmc>
+			<fpdmmc>增值税普通发票电脑版（二联）</fpdmmc>
+			<phcd>8</phcd>
+			<jldwDm>0610</jldwDm>
+			<wtdkbz>N</wtdkbz>
+			<defpbz>N</defpbz>
+			<zppzDm>3</zppzDm>
+			<fpgpfsDm>1</fpgpfsDm>
+			<fpme>0.0</fpme>
+			<mbfs>1.0</mbfs>
+			<kpje>0.0</kpje>
+			<fplbDm>8</fplbDm>
+			<tdhyDm>01</tdhyDm>
+			<skbz>N</skbz>
+			<defpxebz>N</defpxebz>
+			<yspc>1</yspc>
+		</fpNsrfpjcVOListlb>
+	</fpNsrfpjcVOList>
+</taxML>

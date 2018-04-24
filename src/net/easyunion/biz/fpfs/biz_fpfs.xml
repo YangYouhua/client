@@ -12,5 +12,12 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="bizSaveTpxx" class="net.easyunion.biz.fpfs.BizSaveTpxx" />
 	<bean id="bizGetBsxxByNsrsbh" class="net.easyunion.biz.fpfs.BizGetBsxxByNsrsbh" />
 	<bean id="bizGetSwjgKf" class="net.easyunion.biz.fpfs.BizGetSwjgKf" />
-
+	<bean id="bizGetNsrjcxx" class="net.easyunion.biz.fpfs.BizGetNsrJcxx" />
+	<bean id="bizGetDjxh" class="net.easyunion.biz.fpfs.BizGetDjxh" />
+	<bean id="bizGetLog" class="net.easyunion.biz.fpfs.BizGetLog" />
+	<bean id="bizGetNsrzt" class="net.easyunion.biz.fpfs.BizGetNsrzt" />
+	<bean id="bizGetFxnsr" class="net.easyunion.biz.fpfs.BizGetFxnsr" />
+	<bean id="bizGetQsqy" class="net.easyunion.biz.fpfs.BizGetQsqy" />
+	<bean id="bizGetWfwz" class="net.easyunion.biz.fpfs.BizGetWfwz" />
+	<bean id="bizGetSmz" class="net.easyunion.biz.fpfs.BizGetSmz" />
 </beans>

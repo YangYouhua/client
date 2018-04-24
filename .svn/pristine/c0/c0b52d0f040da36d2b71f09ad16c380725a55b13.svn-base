@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGDJ00446Response" xmlmc="根据登记序号查询当前有效的证件结存信息（国税）"
+	xmlbh="TaxMLBw_HXZG_DJ_00446_Response_V1.0.xsd" bbh="1.0"
+	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<NsrzjjcxxGrid>
+		<NsrzjjcxxGridlb>
+			<zjjcuuid>11300000000000000139915022545267</zjjcuuid>
+			<djxh>10111309000126611897</djxh>
+			<lcslid>00000000000000000139915022545267</lcslid>
+			<ffrq>2015-01-22 16:36:50</ffrq>
+			<yxqq>2015-01-22 00:00:00</yxqq>
+			<swzjzlDm>01</swzjzlDm>
+			<yxqz>2049-12-31 00:00:00</yxqz>
+			<swzjhm>13090332027908X</swzjhm>
+			<swzjglztDm>01</swzjglztDm>
+			<lrrDm>11309000397</lrrDm>
+			<lrrq>2015-01-22 16:36:50</lrrq>
+			<xgrDm>11309000397</xgrDm>
+			<xgrq>2015-01-22 16:36:50</xgrq>
+			<sjgsdq>11309031200</sjgsdq>
+		</NsrzjjcxxGridlb>
+		<NsrzjjcxxGridlb>
+			<zjjcuuid>11300000000000000139915022545269</zjjcuuid>
+			<djxh>10111309000126611897</djxh>
+			<lcslid>00000000000000000139915022545269</lcslid>
+			<ffrq>2015-01-22 16:36:50</ffrq>
+			<yxqq>2015-01-22 00:00:00</yxqq>
+			<swzjzlDm>02</swzjzlDm>
+			<yxqz>2049-12-31 00:00:00</yxqz>
+			<swzjhm>13090332027908X</swzjhm>
+			<swzjglztDm>01</swzjglztDm>
+			<lrrDm>11309000397</lrrDm>
+			<lrrq>2015-01-22 16:36:50</lrrq>
+			<xgrDm>11309000397</xgrDm>
+			<xgrq>2015-01-22 16:36:50</xgrq>
+			<sjgsdq>11309031200</sjgsdq>
+		</NsrzjjcxxGridlb>
+		<NsrzjjcxxGridlb>
+			<zjjcuuid>11300000000000000139915023482371</zjjcuuid>
+			<djxh>10111309000126611897</djxh>
+			<lcslid>00000000000000000139915023482371</lcslid>
+			<ffrq>2015-06-11 09:14:34</ffrq>
+			<yxqq>2015-06-11 00:00:00</yxqq>
+			<swzjzlDm>08</swzjzlDm>
+			<yxqz>2049-12-31 00:00:00</yxqz>
+			<swzjhm>数据迁移</swzjhm>
+			<swzjglztDm>01</swzjglztDm>
+			<lrrDm>11309000408</lrrDm>
+			<lrrq>2015-06-11 09:14:34</lrrq>
+			<xgrDm>11309000408</xgrDm>
+			<xgrq>2015-06-11 09:14:34</xgrq>
+			<sjgsdq>11309031200</sjgsdq>
+		</NsrzjjcxxGridlb>
+	</NsrzjjcxxGrid>
+</taxML>

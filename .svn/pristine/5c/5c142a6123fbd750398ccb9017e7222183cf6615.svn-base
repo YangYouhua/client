@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP00276Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fplgqcmxGrid>
+		<fplgqcmxGridlb>
+			<fpDm>1300054620</fpDm>
+			<xgrq xsi:nil="true" />
+			<fpqshm>00234567</fpqshm>
+			<fpzzhm>00234576</fpzzhm>
+			<wtdkbz xsi:nil="true" />
+			<fpzlDm>000008101200</fpzlDm>
+			<fpsl>10.0</fpsl>
+			<lrrDm>11309000425</lrrDm>
+			<xgrDm xsi:nil="true" />
+			<lrrq>2015-10-17 20:10:26</lrrq>
+			<sycxlgptpsl>0</sycxlgptpsl>
+		</fplgqcmxGridlb>
+		<fplgqcmxGridlb>
+			<fpDm>1300151320</fpDm>
+			<xgrq xsi:nil="true" />
+			<fpqshm>07454747</fpqshm>
+			<fpzzhm>07454771</fpzzhm>
+			<wtdkbz xsi:nil="true" />
+			<fpzlDm>000008101200</fpzlDm>
+			<fpsl>25.0</fpsl>
+			<lrrDm>11309000397</lrrDm>
+			<xgrDm xsi:nil="true" />
+			<lrrq>2015-06-11 11:36:38</lrrq>
+			<sycxlgptpsl>0</sycxlgptpsl>
+			<sytggptpsl>0</sytggptpsl>
+		</fplgqcmxGridlb>
+		<fplgqcmxGridlb>
+			<fpDm>1300151320</fpDm>
+			<xgrq xsi:nil="true" />
+			<fpqshm>14438158</fpqshm>
+			<fpzzhm>14438167</fpzzhm>
+			<wtdkbz xsi:nil="true" />
+			<fpzlDm>000008101200</fpzlDm>
+			<fpsl>10.0</fpsl>
+			<lrrDm>11309000408</lrrDm>
+			<xgrDm xsi:nil="true" />
+			<lrrq>2015-08-12 08:22:05</lrrq>
+			<sycxlgptpsl>0</sycxlgptpsl>
+			<sytggptpsl>0</sytggptpsl>
+		</fplgqcmxGridlb>
+	</fplgqcmxGrid>
+</taxML>

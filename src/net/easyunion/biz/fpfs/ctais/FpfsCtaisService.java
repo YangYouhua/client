@@ -175,13 +175,13 @@ public class FpfsCtaisService extends BaseService implements IFpfsServie {
 					lsBsxx = removeDuplicate(lsBsxx);
 					logger.error("共找到" + lsBsxx.size() + "条需要验旧的记录");
 					//执行验旧
-					for (BsxxVo vo : lsBsxx) {
+					/*for (BsxxVo vo : lsBsxx) {
 						System.out.println("验旧信息:" + vo.toString());
 						logger.error("验旧信息:" + vo.toString());
 						YjResultVo ret = saveYjxx(vo);
 						System.out.println(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
 						logger.error(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
-					}
+					}*/
 				}
 			
 				
@@ -675,4 +675,48 @@ public class FpfsCtaisService extends BaseService implements IFpfsServie {
 	public List<Map<String, Object>> getSwjgKf(String swjgDm) {
 		return null;
 	}
+
+	@Override
+	public String getNsrJcxx(String djxh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getDjxh(String djxh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public List<Map<String, Object>> getNsrzt(String djxh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public List<Map<String, Object>> getFxnsr(String nsrsbh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public List<Map<String, Object>> getQsqy(String djxh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getWfwz(String nsrsbh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getSmz(String nsrsbh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 }

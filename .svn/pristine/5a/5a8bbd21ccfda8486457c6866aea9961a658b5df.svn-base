@@ -1,0 +1,648 @@
+package net.easyunion.biz.fpfs.jssq;
+
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import oracle.jdbc.OracleTypes;
+
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ConnectionCallback;
+import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+import net.easyunion.biz.fpfs.IFpfsServie;
+import net.easyunion.biz.fpfs.jssq.send.GetNsrfpjc;
+import net.easyunion.biz.fpfs.jssq.send.GetNsrxx;
+import net.easyunion.biz.fpfs.jssq.send.GetNsrxxGprxx;
+import net.easyunion.biz.fpfs.jssq.send.Jyfstj;
+import net.easyunion.biz.fpfs.jssq.send.QueryGtkcxx;
+import net.easyunion.biz.fpfs.jssq.send.SaveFpfs;
+import net.easyunion.biz.fpfs.jssq.send.SaveFpyj;
+import net.easyunion.biz.fpfs.jssq.send.SaveLgb;
+import net.easyunion.biz.fpfs.jssq.send.SaveTpxx;
+import net.easyunion.biz.fpfs.jssq.send.query.QueryFpLgb;
+import net.easyunion.biz.fpfs.jssq.send.query.QueryFpLgbDyhs;
+import net.easyunion.biz.fpfs.jssq.send.query.QueryFplgbFF;
+import net.easyunion.biz.fpfs.vo.BsxxVo;
+import net.easyunion.biz.fpfs.vo.GpResultVo;
+import net.easyunion.biz.fpfs.vo.GpxxVo;
+import net.easyunion.biz.fpfs.vo.NsrxxVo;
+import net.easyunion.biz.fpfs.vo.PrintLgbVo;
+import net.easyunion.biz.fpfs.vo.SaveGpxxVo;
+import net.easyunion.biz.fpfs.vo.TpResultVo;
+import net.easyunion.biz.fpfs.vo.TpxxVo;
+import net.easyunion.biz.fpfs.vo.YjResultVo;
+import net.easyunion.common.service.BaseService;
+import net.easyunion.common.util.AnalyzeXml;
+import net.easyunion.common.util.DateUtils;
+import net.easyunion.common.util.DocTool;
+import net.easyunion.common.util.HttpToolKit;
+import net.easyunion.common.util.PropertiesUtil;
+import net.easyunion.common.util.StringUtil;
+import net.easyunion.common.util.XmlUtil;
+import net.easyunion.common.vo.ResultXmlVo;
+
+@Service("fpfsJssqService")
+public class FpfsJssqService extends BaseService implements IFpfsServie {
+	
+	private final static Logger logger = LoggerFactory.getLogger(FpfsJssqService.class);
+
+	@Override
+	public List<NsrxxVo> getNsrxxByID(String sfzhm) {
+		return null;
+	}
+	
+	@Override
+	public List<GpxxVo> getNsrGpxx(final String nsrsbh, final String fpzlDm, final String fpkfDm, final String lrrDm, final String swjgDm, final String djxh, final String fpdm) {
+		List<GpxxVo> result = new ArrayList<GpxxVo>();
+		try {
+			Document jcxxDoc = null;
+			ResultXmlVo vo = null;
+			
+			//验旧操作
+			{
+				jcxxDoc = GetNsrfpjc.send(djxh, "0");
+				vo = AnalyzeXml.analyzeJsDoc(jcxxDoc);
+				logger.error("===========请求获取纳税人结存信息接口 code:" +vo.isResult()+ "  message :" +vo.getMessage());
+				if(vo.isResult()){
+					final List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");
+					
+					//取当前日期前4个月报税信息
+					for(int i=0;i<=3;i++){
+						Calendar cal = Calendar.getInstance();
+						cal.add(Calendar.MONTH, -i);
+						Date date = cal.getTime();
+						final String kprq = new SimpleDateFormat("yyyyMM").format(date)+"01";
+						
+						@SuppressWarnings("unchecked")
+						List<BsxxVo> lsBsxx = (List<BsxxVo>)this.getFwskDao().getJdbcTemplate().execute(new ConnectionCallback<Object>() {
+							@Override
+							public Object doInConnection(Connection conn)
+									throws SQLException, DataAccessException {
+								CallableStatement cst = conn.prepareCall("{?=call htjs.p_get_fwsk_bsxx(?,?,?,?)}");
+								cst.registerOutParameter(1, OracleTypes.NUMBER);
+								cst.setString(2, nsrsbh);
+								cst.setString(3, kprq);
+								cst.registerOutParameter(4, OracleTypes.CURSOR);
+								cst.registerOutParameter(5, OracleTypes.VARCHAR);
+								cst.execute();
+								ResultSet rs = (ResultSet) cst.getObject(4);
+								
+								List<BsxxVo> _lsBsxx = new ArrayList<BsxxVo>();
+								
+								while (rs.next()) {
+									String str = "#" + rs.getString("AVC_FPDM") + "|"
+											+ rs.getString("AVC_FPQH") + "|" + rs.getString("AVC_FPZH")
+											+ "|" + rs.getFloat("AN_JE") + "|" + rs.getFloat("AN_SE") + "|"
+											+ rs.getString("AC_FPTKZT") + "|" + rs.getString("AVC_KPRQQ") + "|"
+											+ rs.getString("AVC_KPRQZ") + "|" + rs.getInt("FS");
+									
+									logger.error("接口返回验旧信息：" + str);
+									
+									//判断记录是否在结存中，不在则跳过
+									for (Map<String, Object> m : jcList){
+										double jcFpqh = Double.parseDouble(m.get("fpqshm").toString());
+										double jcFpzh = Double.parseDouble(m.get("fpzzhm").toString());
+										String jczl = m.get("fpzlDm").toString().trim();  //判断种类
+										
+										double bsFpqh = Double.parseDouble(rs.getString("AVC_FPQH"));
+										double bsFpzh = Double.parseDouble(rs.getString("AVC_FPZH"));
+										
+										logger.error("结存中的发票种类代码：" + jczl);
+										logger.error("当前机器传入的发票种类代码" + fpzlDm);
+										logger.error("当前发票起号：[结存]:" + String.valueOf(jcFpqh) + ", [报税]" + String.valueOf(bsFpqh));
+										logger.error("当前发票止号：[结存]:" + String.valueOf(jcFpzh) + ", [报税]" + String.valueOf(bsFpzh));
+										logger.error("票种类判断：" + fpzlDm.equals(jczl));
+										//只验旧机器对应的发票种类和结存中存在的发票
+										if (bsFpqh >= jcFpqh && bsFpzh <= jcFpzh && fpzlDm.equals(jczl)){
+											//获取发票种类代码
+											logger.error("此发票段在纳税人结存中存在，且是对应的发票种类.");
+											
+											//效验是否正常发票，只需要验旧正常发票，其他发票不需要验旧，湖南版本
+											if("10".equals(rs.getString("AC_FPTKZT"))){
+												logger.error("进来了。。。。。。。。。。。。。。。。");
+												BsxxVo bsxx = new BsxxVo();
+												bsxx.setFpDm(rs.getString("AVC_FPDM"));
+												bsxx.setFpQh(rs.getString("AVC_FPQH"));
+												bsxx.setFpZh(rs.getString("AVC_FPZH"));
+												bsxx.setJe(rs.getFloat("AN_JE")+"");
+												bsxx.setSe(rs.getFloat("AN_SE")+"");
+												bsxx.setFptkzt(rs.getString("AC_FPTKZT"));
+												bsxx.setKprqQ(rs.getString("AVC_KPRQQ"));
+												bsxx.setKprqZ(rs.getString("AVC_KPRQZ"));
+												bsxx.setFs(rs.getInt("FS")+"");
+												bsxx.setNsrsbh(nsrsbh);
+												bsxx.setFpzlDm(fpzlDm);
+												bsxx.setLrrDm(lrrDm);
+												bsxx.setSwjgDm(swjgDm);
+												bsxx.setDjxh(djxh);
+												
+												_lsBsxx.add(bsxx);
+											  
+											}else{
+												logger.error("没进来。。。。。。。。。。。。。。。。");
+											}
+												
+										}
+									}
+									
+								}
+								return _lsBsxx;
+							}
+						});
+						
+						//去重
+						lsBsxx = removeDuplicate(lsBsxx);
+						logger.error("共找到" + lsBsxx.size() + "条需要验旧的记录");
+						//执行验旧
+						for (BsxxVo bsxxVo : lsBsxx) {
+							System.out.println("验旧信息:" + bsxxVo.toString());
+							logger.error("验旧信息:" + bsxxVo.toString());
+							YjResultVo ret = saveYjxx(bsxxVo);
+							System.out.println(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
+							logger.error(kprq + "验旧结果：" + ret.isOk() + " " + ret.getMsg());
+						}
+					}
+				}
+			
+			}
+			
+			//获取购票信息
+			{
+				//判断纳税人是否有领票权限
+				//1、判断地市
+				
+				//2、判断纳税人登记状态
+				
+				//3、判断纳税人领票权限
+				
+				
+				
+				
+				
+				logger.error("开始计算纳税人可购票数量================================");
+				
+				logger.error("获取纳税人票种核定信息==================================");
+				Document hdDoc = GetNsrxxGprxx.send(djxh);//获取票种核定信息
+				vo = AnalyzeXml.analyzeJsDoc(hdDoc);
+				if(vo.isResult()){
+					long hdSl = 0L;//核定数量
+					long jcSl = 0L;//结存数量
+					long kcSl = 0L;//库房数量
+					long lySl = 0L;//本月已领数量
+					long ykgSl = 0L;//每月最大购票数量
+					long kgSl = 0L;//可购数量
+					
+					//获取核定数量
+					List<Map<String, Object>> hdList = XmlUtil.getListMap(vo.getDoc(), "fpPzhdxxGridlb", "2");
+					if(hdList!=null && hdList.size()>0){
+						for(Map<String, Object> map:hdList){
+							if(fpzlDm.equals(map.get("fpzlDm").toString())){
+								hdSl = getFpFs(map.get("mczggpsl").toString());
+								ykgSl = getFpFs(map.get("myzggpsl").toString());
+							}
+						}
+					}
+					
+					logger.error("纳税人核定数量为："+hdSl+"=============================");
+					logger.error("获取纳税人验旧过后结存信息==================================");
+					
+					jcxxDoc = GetNsrfpjc.send(djxh, "0");
+					vo = AnalyzeXml.analyzeJsDoc(jcxxDoc);
+					
+					List<Map<String, Object>> jcList = XmlUtil.getListMap(vo.getDoc(), "fpNsrfpjcVOListlb", "2");//获取结存信息
+					
+					//获取结存数量
+					if(jcList !=null && jcList.size()>0){
+						for(Map<String, Object> map:jcList){
+							if(fpzlDm.equals(map.get("fpzlDm").toString())){
+								jcSl = getFpFs(map.get("fs").toString()) + jcSl;
+							}
+						}
+					}
+					
+					logger.error("纳税人结存信息为："+jcSl+"=================================");
+					
+					
+					logger.error("判断纳税人验旧过后的结存信息和核定数量============================");
+					if(jcSl >= hdSl){
+						GpxxVo gpxx = new GpxxVo();
+						gpxx.setFpDm("0");
+						gpxx.setFpQh("0");
+						gpxx.setKfsl(0L);
+						gpxx.setKgsl(0L);
+						gpxx.setJyxx("纳税人结存信息已满，不可领购发票！");
+						result.add(gpxx);
+						return result;
+					}else{
+						kgSl = hdSl - jcSl;
+					}
+					
+					logger.error("获取纳税人本月已领票数==================================");
+					List<Map<String, Object>> lyList = this.getJdbcDao().find("select t2.* from fp_ly t1,FP_LY_MX t2 where t1.DJXH = '"+djxh+"' and t1.FPLYUUID = t2.FPLYUUID  and t1.SLRQ>=to_date('"+DateUtils.formatDateToString(new Date(), "yyyy-MM")+"','yyyy-mm') and t2.FPZL_DM = '"+fpzlDm+"'");
+					if(lyList !=null && lyList.size()>0){
+						for(Map<String, Object> map:lyList){
+							long sl = Long.parseLong(map.get("FPSL").toString());
+							lySl = lySl + sl;
+						}
+					}
+					
+					logger.error("纳税人本月已领数量为：" + lySl + "========================");
+					
+					//计算每次、每月以及纳税人本月已领票====================================================
+					if(lySl > 0){
+						long res = 0L;
+						if(lySl >= ykgSl){
+							GpxxVo gpxx = new GpxxVo();
+							gpxx.setFpDm("0");
+							gpxx.setFpQh("0");
+							gpxx.setKfsl(0L);
+							gpxx.setKgsl(0L);
+							gpxx.setJyxx("本月可购数量为0！");
+							result.add(gpxx);
+							return result;
+						}else{
+							res = ykgSl - lySl;
+						}
+						if(res < kgSl){
+							kgSl = res;
+						}
+					} 
+					//====================================================================================
+					
+					logger.error("计算后纳税人核定数量为："+hdSl+"================================");
+					
+					if(hdSl <= 0){
+						GpxxVo gpxx = new GpxxVo();
+						gpxx.setFpDm("0");
+						gpxx.setFpQh("0");
+						gpxx.setKfsl(0L);
+						gpxx.setKgsl(0L);
+						gpxx.setJyxx("核定数量为零，不可领购发票，请联系税局人员！");
+						result.add(gpxx);
+						return result;
+					}
+					
+					String fpDm = "";
+					String fpQh = "";
+					long canSl = 0L;//可购发票数量
+					
+					ResultXmlVo kfxxVo = AnalyzeXml.analyzeJsDoc(QueryGtkcxx.send(djxh, null, fpkfDm, null));//查询柜台库存信息
+					logger.error("fpdm:"+fpdm+",fpzlDm:"+fpzlDm+",开始匹配库存信息=========================");
+					if(kfxxVo.isResult()){
+						List<Map<String, Object>> kfList = XmlUtil.getListMap(kfxxVo.getDoc(), "swjgkfkcVOListlb", "2");
+						if(kfList!=null && kfList.size()>0){
+							for(Map<String, Object> kf:kfList){
+								if(fpdm.equals(kf.get("fpDm")) && fpzlDm.equals(kf.get("fpzlDm"))){
+									if(StringUtils.isEmpty(fpQh)){
+										kcSl = getFpFs(kf.get("kcfs").toString());
+										fpDm = kf.get("fpDm").toString();
+										fpQh = kf.get("fpqshm").toString();
+									}else{
+										if(Long.parseLong(fpQh) > Long.parseLong(kf.get("fpqshm").toString())){
+											kcSl = getFpFs(kf.get("kcfs").toString());
+											fpDm = kf.get("fpDm").toString();
+											fpQh = kf.get("fpqshm").toString();
+										}
+									}
+								}
+							}
+						}
+					}
+					
+					logger.error("库房数量："+kcSl+",发票代码："+fpDm+",发票起号："+fpQh+"============================");
+					
+					logger.error("计算核定数量和结存信息后为：" + hdSl + " ====================================");
+					
+					GpxxVo gpxxVo = new GpxxVo();
+					gpxxVo.setFpDm(fpDm);
+					gpxxVo.setKfsl(kcSl);
+					gpxxVo.setFpQh(fpQh);
+					
+					if(kgSl >= kcSl){
+						canSl = kcSl;
+					}else{
+						canSl = kgSl;
+					}
+					
+					logger.error("计算后纳税人可购票数量为："+canSl+"======================================");
+					
+					gpxxVo.setKgsl(canSl);
+					result.add(gpxxVo);
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public GpResultVo saveGpxx(SaveGpxxVo saveGpxxVo) {
+		GpResultVo resVo = new GpResultVo();
+		logger.error("开始写入发票领购信息============================");
+		try {
+				ResultXmlVo xmlVo = AnalyzeXml.analyzeJsDoc(SaveFpfs.send(saveGpxxVo));
+				logger.error("===============写入发票领购信息返回 Code："+xmlVo.isResult()+",message:"+xmlVo.getMessage());
+				if(xmlVo.isResult()){
+					logger.error("写入发票领购信息成功============================");
+					logger.info("开始写入防伪税控系统==============================");
+					
+					String fwskUrl = PropertiesUtil.getInstance().getProperties("fwsk.url");
+			        fwskUrl = fwskUrl + "/FpfsJoin?rkdj=0.0&fsdj=0.0&gpfs=NET";
+			        logger.error("fwskUrl : " + fwskUrl);
+			        System.out.println("fwskUrl : " + fwskUrl);
+//			        
+			        String sCzymc = "ctais";
+			        String sFpzl = "";
+//			        
+//			        //防伪税控发票种类   P1 普通发票 YB 专票
+			        if(saveGpxxVo.getZppzDm().equals("1")){
+			        	sFpzl = "YB";
+			        }else{
+			        	sFpzl = "P1";
+			        }
+			        String fwskSwjgDm = saveGpxxVo.getFwskSwjgDm().substring(0, saveGpxxVo.getFwskSwjgDm().length()-2);
+			        String postData = "1|@|" + saveGpxxVo.getNsrsbh() + "|@|" + saveGpxxVo.getFpDm() + "|@|" + fwskSwjgDm + "|@|" + saveGpxxVo.getFpQh() + "|@|" + saveGpxxVo.getFpZh() + "|@|" + saveGpxxVo.getFs() + "|@|" + sCzymc + "|@|" + sFpzl;
+			        
+			        System.out.println("postData: " + postData);
+			        
+			        String retFwsk = HttpToolKit.doPost(fwskUrl, postData);
+			        
+			        
+			        if ("0".equals(retFwsk.trim())) {
+			        	resVo.setOk(true);
+			        	resVo.setLgbhs(0L);
+			        } else {
+			        	TpxxVo tpxxVo = new TpxxVo();
+			        	tpxxVo.setDjxh(saveGpxxVo.getDjxh());
+			    		tpxxVo.setBs(saveGpxxVo.getFs().intValue());
+			    		tpxxVo.setDj(0.0);
+			    		tpxxVo.setFpDm(saveGpxxVo.getFpDm());
+			    		tpxxVo.setFpqh(saveGpxxVo.getFpQh());
+			    		tpxxVo.setFpzh(saveGpxxVo.getFpZh());
+			    		tpxxVo.setJe(0.0);
+			    		tpxxVo.setKfdm(saveGpxxVo.getFpkfDm());
+			    		tpxxVo.setLrrDm(saveGpxxVo.getLrrDm());
+			    		tpxxVo.setNsrsbh(saveGpxxVo.getNsrsbh());
+			    		tpxxVo.setYssphm("0000000000");
+			    		tpxxVo.setSwjgDm(saveGpxxVo.getSwjgDm());
+			    		tpxxVo.setSqrXm(saveGpxxVo.getGprXm());
+			    		tpxxVo.setFpzlDm(saveGpxxVo.getFpzlDm());
+			    		tpxxVo.setZppzDm(saveGpxxVo.getZppzDm());
+			    		tpxxVo.setFpdmmc(saveGpxxVo.getFpdmmc());
+			    		
+			    		TpResultVo tpRetVo = saveTpxx(tpxxVo);
+			        	
+			        	String tpErrorMsg = "";
+			        	if (!tpRetVo.isOk()){
+			        		tpErrorMsg = tpRetVo.getMsg();
+			        	}
+			        	resVo.setOk(false);
+			        	resVo.setMsg(retFwsk + "|" + tpErrorMsg);
+			        }
+			        logger.error("写入防伪税控完毕，返回值：" + retFwsk);
+				}else{
+					resVo.setOk(false);
+					resVo.setMsg(xmlVo.getMessage());
+				}
+		} catch (Exception e) {
+			resVo.setOk(false);
+			resVo.setMsg(e.toString());
+			e.printStackTrace();
+		}
+		logger.error("写入发票发售信息结束=======================================");
+		return resVo;
+	}
+
+	@Override
+	public TpResultVo saveTpxx(TpxxVo tpxxVo) {
+		TpResultVo resVo = new TpResultVo();
+		logger.error("开始写入发票退票信息===============================");
+		try {
+			ResultXmlVo xmlVo = AnalyzeXml.analyzeJsDoc(SaveTpxx.send(tpxxVo));
+			logger.error("==================写入退票信息返回code："+xmlVo.isResult()+",message:"+xmlVo.getMessage());
+			if(xmlVo.isResult()){
+				resVo.setOk(true);
+			}else{
+				resVo.setMsg(xmlVo.getMessage());
+				resVo.setOk(false);
+			}
+		} catch (Exception e) {
+			resVo.setOk(false);
+			resVo.setMsg(e.toString());
+			e.printStackTrace();
+		}
+		logger.error("结束写入发票退票信息===============================");
+		return resVo;
+	}
+
+	@Override
+	public YjResultVo saveYjxx(BsxxVo yjxxVo) {
+		YjResultVo resVo = new YjResultVo();
+		try {
+			Document doc = SaveFpyj.send(yjxxVo);
+			ResultXmlVo resXml = AnalyzeXml.analyzeJsDoc(doc);
+			if(resXml.isResult()){
+				resVo.setOk(true);
+			}else{
+				resVo.setOk(false);
+				resVo.setMsg(resXml.getMessage());
+			}
+		} catch (Exception e) {
+			resVo.setOk(false);
+			resVo.setMsg(e.toString());
+			e.printStackTrace();
+		}
+		return resVo;
+	}
+
+	@Override
+	public List<BsxxVo> getBsxxByNsrsbh(String nsrsbh, String fpzlDm, String lrrDm, String swjgDm) {
+		return null;
+	}
+
+	@Override
+	public List<NsrxxVo> getNsrxxByNsrsbh(String nsrsbh) {
+		List<NsrxxVo> list = new ArrayList<NsrxxVo>();
+		Document doc = null;
+		try {
+			doc = GetNsrxx.send(nsrsbh);//根据纳税人识别号获取纳税人信息
+			ResultXmlVo resXml = AnalyzeXml.analyzeJsDoc(doc);
+			logger.error("==========查询纳税人信息接口返回值：" + resXml.isResult() + " , message :" + resXml.getMessage());
+			if(resXml.isResult()){
+				String djxh = "";
+				String nsrmc = "";
+				List<Map<String, Object>> nsrxxList = XmlUtil.getListMap(resXml.getDoc(), "nsrxxGridlb", "2");
+				if(nsrxxList.size()>1){
+					List<Map<String, Object>> resNsrxx = new ArrayList<Map<String, Object>>();
+					if(nsrxxList!=null && nsrxxList.size()>0){
+						for(Map<String, Object> map:nsrxxList){
+							int kzztdjlxDm = Integer.parseInt(map.get("kzztdjlxDm").toString());
+							if(kzztdjlxDm > 1000 && kzztdjlxDm <= 1120){
+								logger.error("匹配到一条数据符合：" + kzztdjlxDm);
+								resNsrxx.add(map);
+							}
+						}
+					}
+					logger.error("匹配到的数据总数为：" + resNsrxx.size());
+					if(resNsrxx.size() == 1){
+						djxh = resNsrxx.get(0).get("djxh").toString();
+						nsrmc = resNsrxx.get(0).get("nsrmc").toString();
+					}else{
+						logger.error("匹配到的数据长度超过1。。。。。。");
+						return new ArrayList<NsrxxVo>();
+					}
+				}else{
+					djxh = nsrxxList.get(0).get("djxh").toString();
+					nsrmc = nsrxxList.get(0).get("nsrmc").toString();
+				}
+				
+				
+				doc = GetNsrxxGprxx.send(djxh);//查询纳税人详细信息和购票人信息 
+				resXml = AnalyzeXml.analyzeJsDoc(doc);
+				logger.error("==========查询纳税人详细信息和购票人信息 接口返回值：" + resXml.isResult() + " , message :" + resXml.getMessage());
+				List<Map<String, Object>> listMap = XmlUtil.getListMap(resXml.getDoc(), "fpPzhdgprxxGridlb", "2");
+				logger.error("解析购票人信息listMap ：" +listMap.size());
+				String cwfzrIdCard = DocTool.getChildValue(resXml.getDoc(), 0, "cwfzrsfzjhm");
+				String fddbrIdCard = DocTool.getChildValue(resXml.getDoc(), 0, "fddbrsfzjhm");
+				String zgswjDm = DocTool.getChildValue(resXml.getDoc(), 0, "zgswjDm");
+				for(Map<String, Object> map:listMap){
+					NsrxxVo vo = new NsrxxVo();
+					vo.setDjxh(djxh);
+					vo.setNsrsbh(nsrsbh);
+					vo.setNsrmc(nsrmc);
+					vo.setCwfzrIdCard(cwfzrIdCard);
+					vo.setFddbrIdCard(fddbrIdCard);
+					vo.setGprIdCard(map.get("sfzjhm").toString());
+					vo.setGprmc(map.get("gprxm").toString());
+					vo.setSwjgDm(zgswjDm);
+					list.add(vo);
+					logger.error("纳税人名称:" +nsrmc+ "，购票人名称：" + map.get("gprxm").toString());
+				}
+				
+				logger.error("返回纳税人信息list：" +list.size());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public static List<BsxxVo> removeDuplicate(List<BsxxVo> _list) {
+		List<BsxxVo> list = _list;
+		for (int i = 0; i < list.size() - 1; i++) {
+			for (int j = list.size() - 1; j > i; j--) {
+				if (list.get(j).equals(list.get(i))) {
+					list.remove(j);
+				}
+			}
+		}
+		return list;
+	}
+	
+	public Long getFpFs(String str){
+		if(str.indexOf(".") > -1){
+			return Long.parseLong(str.substring(0 , str.indexOf(".")));
+		}else{
+			return Long.parseLong(str);
+		}
+		
+	}
+
+	@Override
+	public List<Map<String, Object>> getSwjgKf(String swjgDm) {
+		String sql = "select * from fp_fpkf where ssswjg_dm = '"+swjgDm+"'";
+		return this.getJdbcDao().find(sql);
+	}
+	public static void main(String[] args) {
+		try {
+			Document doc = DocTool.getDocument("<service xmlns=\"http://www.chinatax.gov.cn/spec/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><head><tran_id>SWZJ.HXZG.FP.CXGTCKXX</tran_id><channel_id>HLGS.NFWB.FPFS</channel_id><tran_seq>6b8c0b1061f0425d9564236a7257cd19</tran_seq><tran_date>20170104</tran_date><tran_time>115400004</tran_time><rtn_code>0</rtn_code><rtn_msg><Code>000</Code> <Message></Message><Reason></Reason></rtn_msg><expand><name>identityType</name><value>HLGS.NFWB.FPFS</value></expand><expand><name>sjry</name><value>11309001906</value></expand><expand><name>sjjg</name><value>11301022300</value></expand></head><body><![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><taxML xsi:type=\"HXZGFP05048Response\" xmlns=\"http://www.chinatax.gov.cn/dataspec/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><swjgkfkcVOList><swjgkfkcVOListlb><fpzlDm>000008101200</fpzlDm><sjgsdq xsi:nil=\"true\"/><fpkfDm>2D38DC3F7DA30150E0534A10C838AA38</fpkfDm><fpzzhm>00274100</fpzzhm><xzzhm xsi:nil=\"true\"/><xqshm xsi:nil=\"true\"/><fpDm>2300164320</fpDm><fpqshm>00274006</fpqshm><bs>95</bs><xs xsi:nil=\"true\"/><kfkcuuid xsi:nil=\"true\"/><lrrDm xsi:nil=\"true\"/><fpztDm>20</fpztDm><xgrDm xsi:nil=\"true\"/><swjgDm xsi:nil=\"true\"/><mbfs>1.0</mbfs><kcfs>95.0</kcfs><fpdmmc>黑龙江增值税普通发票（二联）</fpdmmc><phcd>8</phcd><fpme>0.0</fpme><jldwDm>0610</jldwDm><fpzlmc>2008版增值税普通发票（二联无金额限制版）</fpzlmc><je>0.0</je><fpxj>0.35</fpxj><fpjj>0.35</fpjj><yspc>4</yspc></swjgkfkcVOListlb></swjgkfkcVOList></taxML>]]></body></service>");
+			
+			ResultXmlVo vo = AnalyzeXml.analyzeJsDoc(doc);
+			String res = "";
+			List<Map<String, Object>> listMap = XmlUtil.getListMap(vo.getDoc(), "swjgkfkcVOListlb", "2");
+			if(listMap !=null && listMap.size()>0){
+				for(Map<String, Object> map : listMap){
+					res += "<swjgkfkcVOListlb><fpqshm>" + map.get("fpqshm") + "</fpqshm><fpzlDm>"+map.get("fpzlDm")+"</fpzlDm></swjgkfkcVOListlb>";
+				}
+			}
+			System.out.println(res);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public String getNsrJcxx(String fpkfDm) {
+		ResultXmlVo vo = null;
+		String res = "";
+		try {
+			vo = AnalyzeXml.analyzeJsDoc(QueryGtkcxx.send(null, null, fpkfDm, null));
+			
+			List<Map<String, Object>> listMap = XmlUtil.getListMap(vo.getDoc(), "swjgkfkcVOListlb", "2");
+			if(listMap !=null && listMap.size()>0){
+				for(Map<String, Object> map : listMap){
+					res += "<swjgkfkcVOListlb><fpqshm>" + map.get("fpqshm") + "</fpqshm><fpzlDm>"+map.get("fpzlDm")+"</fpzlDm></swjgkfkcVOListlb>";
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+
+}

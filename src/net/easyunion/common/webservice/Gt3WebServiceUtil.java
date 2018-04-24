@@ -20,14 +20,16 @@ import cn.com.servyou.bonde.gate.entrance.EntranceWebserviceService;
 import cn.com.servyou.bonde.gate.entrance.IEntranceWebservice;
 import cn.gov.chinatax.hxzg.spec.Gt3AipWebService;
 import cn.gov.chinatax.hxzg.spec.Gt3AipWebService_Service;
+import cn.net.easyunion.ws.TsmmsWebService;
+import cn.net.easyunion.ws.TsmmsWebServicePortType;
 
 public class Gt3WebServiceUtil {
 	
 	private static final QName SERVICE_NAME = new QName("http://entrance.gate.bonde.servyou.com.cn/", "EntranceWebserviceService");
 	
 	/**
-	 * 请求webservice
-	 * @param xml 参数报文
+	 * 璇锋眰webservice
+	 * @param xml 鍙傛暟鎶ユ枃
 	 * @throws Exception 
 	 */
 	public static String sendWebService(String xml) throws Exception{
@@ -50,8 +52,21 @@ public class Gt3WebServiceUtil {
 			return rtn;
 		}
 	}
+	
 	/**
-	 * 请求税友webservice
+	 * 浪潮通道
+	 * @param xml
+	 * @return
+	 */
+	public static String sendLc(String xml){
+		TsmmsWebService tws = new TsmmsWebService();
+		TsmmsWebServicePortType twspt = tws.getTsmmsWebServiceSOAP11PortHttp();
+		String str = twspt.doService(xml);
+		return str;
+	}
+	
+	/**
+	 * 璇锋眰绋庡弸webservice
 	 * @return
 	 * @throws Exception 
 	 */
@@ -65,7 +80,7 @@ public class Gt3WebServiceUtil {
 
 	
 	public static void main(String args[]) throws Exception{
-		File file = new File("D:\\fpfs\\CX003\\税友请求报文.xml");
+		File file = new File("D:\\fpfs\\CX003\\绋庡弸璇锋眰鎶ユ枃.xml");
 		String request = FileUtils.readFileToString(file);
 //		String res = GetNsrxx.getXml("130903320279081");
 //		Gt3WebServiceVo vo = new Gt3WebServiceVo();

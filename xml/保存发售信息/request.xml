@@ -29,13 +29,20 @@
 	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<lyVO>
 		<sjgsdq>11309031200</sjgsdq>
+		<!-- 登记序号 -->
 		<djxh>10111309000126611897</djxh>
+		<!-- 发票领用编号 -->
 		<fplyuuid>b0c964a4bc7541a18acba1f97c645ff0</fplyuuid>
 		<fpkfDm>4E1C3CA8D56F1043DDD66BC6F0FCB76C</fpkfDm>
+		<!-- 身份证记录项代码 -->
 		<sfzjlxDm>100</sfzjlxDm>
+		<!-- 购票人姓名 -->
 		<gprxm>史清岭</gprxm>
+		<!-- 录入人代码 -->
 		<lrrDm>11309000397</lrrDm>
+		<!-- 数量事务机构代码 -->
 		<slswjgDm>11309031200</slswjgDm>
+		<!-- 限购入代码 -->
 		<xgrDm>11309000397</xgrDm>
 		<slrq>2015-10-18</slrq>
 		<slrDm>11309000397</slrDm>

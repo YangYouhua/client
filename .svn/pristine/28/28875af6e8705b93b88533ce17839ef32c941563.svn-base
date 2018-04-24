@@ -1,0 +1,28 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.DJ.CXNSRXXBYDJXH</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>C000BNFZC25001201305030505267890</tran_seq>
+		<tran_date>20140826</tran_date>
+		<tran_time>173435849</tran_time>
+		<rtn_code>0</rtn_code>
+		<rtn_msg>
+			<Code>000</Code>
+			<Message></Message>
+			<Reason></Reason>
+		</rtn_msg>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14400qydzs0</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>11301022300</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGDJ00004Response" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><nsrxxGrid><nsrxxGridlb><nsrfyhyGrid><djnsrfyhyGridlb><xh>0</xh></djnsrfyhyGridlb></nsrfyhyGrid><gdslxDm>1</gdslxDm><nsrsbh>13090332027908X</nsrsbh><nsrmc>沧州昊远科技有限公司</nsrmc><fddbrsfzjlxDm>201</fddbrsfzjlxDm><kqccsztdjbz>N</kqccsztdjbz><zgswjDm>11309030000</zgswjDm><scjydz>河北省沧州市运河区西环北路欣园小区16栋4-602室</scjydz><zcdzxzqhszDm>130900</zcdzxzqhszDm><jdxzDm>130903100</jdxzDm><gdghlxDm>1</gdghlxDm><ssglyDm>11309000451</ssglyDm><nsrztDm>03</nsrztDm><hyDm>5273</hyDm><djxh>10111309000126611897</djxh><djrq>2015-01-22 00:00:00.0</djrq><zzjgDm>32027908X</zzjgDm><scjydzxzqhszDm>130900</scjydzxzqhszDm><djjgDm>11309031200</djjgDm><fddbrxm>段凤娟</fddbrxm><dwlsgxDm>90</dwlsgxDm><lrrDm>11309000397</lrrDm><swdjblbz>Y</swdjblbz><kzztdjlxDm>1110</kzztdjlxDm><djzclxDm>173</djzclxDm><fddbrsfzjhm>130921198110104422</fddbrsfzjhm><zcdz>河北省沧州市运河区西环北路欣园小区16栋4-602室</zcdz><sjgsdq>11309031200</sjgsdq><zgswskfjDm>11309031200</zgswskfjDm><fjmqybz>N</fjmqybz><ssdabh>10111309000090930283</ssdabh><lrrq>2015-01-22 16:30:54.0</lrrq><hhrs>0</hhrs><ggrs>0</ggrs><gytzbl>0.0</gytzbl><zczbbzyje>0.0</zczbbzyje><jyfw>网络技术研发，推广；办公软件研发；批发零售：办公设备、计算机软件及辅助设备、印章材料。（依法须经批准的项目，经相关部门批准后方可开展经营活动）***</jyfw><zczbbzsje>0.0</zczbbzsje><gjhdqszDm>156</gjhdqszDm><zfjglxDm>0</zfjglxDm><wjcyrs>0</wjcyrs><bsrxm>史清岭</bsrxm><zczbbzeje>0.0</zczbbzeje><tzzebzyje>0.0</tzzebzyje><scjydyzbm>061001</scjydyzbm><cyrs>0</cyrs><gdgrs>0</gdgrs><zrrtzbl>0.0</zrrtzbl><ygznsrlxDm>22</ygznsrlxDm><zczb>0.0</zczb><tzze>0.0</tzze><scjydlxdh>13803234682</scjydlxdh><wztzbl>0.0</wztzbl><tzzebzeje>0.0</tzzebzeje><tzzebzsje>0.0</tzzebzsje><kyslrq>2015-01-20</kyslrq></nsrxxGridlb></nsrxxGrid></taxML>]]></body>
+</service>

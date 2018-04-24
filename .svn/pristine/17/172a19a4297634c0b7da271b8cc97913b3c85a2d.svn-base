@@ -1,0 +1,28 @@
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.CXNSRPZHDGPR</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>e645dbdbbc03462cb99402bfe37f6d79</tran_seq>
+		<tran_date>20120420</tran_date>
+		<tran_time>022034181</tran_time>
+		<rtn_code>0</rtn_code>
+		<rtn_msg>
+			<Code>000</Code>
+			<Message></Message>
+			<Reason></Reason>
+		</rtn_msg>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>24406060735</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>24406060700</value>
+		</expand>
+	</head>
+	<body><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><taxML xsi:type="HXZGFP05196Response" xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><fpPzhdgprxxVOList><fpPzhdgprxxVOListlb><sfzjhm>130903198003081218</sfzjhm><xgrq>2015-01-29 14:27:14</xgrq><yxbz>Y</yxbz><swjgDm>11309031200</swjgDm><djxh>10111309000126611897</djxh><gprqcuuid>1744B09CE98E0162E0537F0000010544</gprqcuuid><lxdh>13803234682</lxdh><sfzjzlDm>201</sfzjzlDm><yxqq>2015-01-29 00:00:00</yxqq><lrrDm>11309000397</lrrDm><gprxm>史清岭</gprxm><yxqz>9999-12-31 00:00:00</yxqz><xgrDm>11309000397</xgrDm><sjgsdq>11309031200</sjgsdq><lrrq>2015-01-29 14:27:14</lrrq></fpPzhdgprxxVOListlb></fpPzhdgprxxVOList></taxML>]]></body>
+</service>

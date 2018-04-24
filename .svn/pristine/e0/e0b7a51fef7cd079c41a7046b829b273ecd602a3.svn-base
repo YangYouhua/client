@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP00000Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fpPzhdCSHVO>
+		<djNsrxxVO>
+			<bsrgddh>13803234682</bsrgddh>
+			<bsrsfzjhm>130903198003081218</bsrsfzjhm>
+			<bsrsfzjzlDm>201</bsrsfzjzlDm>
+			<bsrxm>史清岭</bsrxm>
+			<bsryddh>13803234682</bsryddh>
+			<bzfsDm>3</bzfsDm>
+			<cwfzrgddh>13803234682</cwfzrgddh>
+			<cwfzrsfzjhm>130903198003081218</cwfzrsfzjhm>
+			<cwfzrsfzjzlDm>201</cwfzrsfzjzlDm>
+			<cwfzrxm>史清岭</cwfzrxm>
+			<cwfzryddh>13803234682</cwfzryddh>
+			<cyrs>3.0</cyrs>
+			<djjgDm>11309031200</djjgDm>
+			<djrq>2015-01-22T00:00:00+08:00</djrq>
+			<djxh>10111309000126611897</djxh>
+			<djzclxDm>173</djzclxDm>
+			<djzclxmc>私营有限责任公司</djzclxmc>
+			<dwlsgxDm>90</dwlsgxDm>
+			<fddbrgddh>13803234682</fddbrgddh>
+			<fddbrsfzjhm>130921198110104422</fddbrsfzjhm>
+			<fddbrsfzjlxDm>201</fddbrsfzjlxDm>
+			<fddbrsfzjlxmc>居民身份证</fddbrsfzjlxmc>
+			<fddbrxm>段凤娟</fddbrxm>
+			<fddbryddh>13803234682</fddbryddh>
+			<fjmqybz>N</fjmqybz>
+			<gdghlxDm>1</gdghlxDm>
+			<gdslxDm>1</gdslxDm>
+			<gjhdqszDm>156</gjhdqszDm>
+			<gytzbl>0.0</gytzbl>
+			<hsfsDm>11</hsfsDm>
+			<hyDm>5273</hyDm>
+			<hymc>计算机、软件及辅助设备零售</hymc>
+			<jdxzDm>130903100</jdxzDm>
+			<jdxzmc>小王庄镇</jdxzmc>
+			<jyfw>网络技术研发，推广；办公软件研发；批发零售：办公设备、计算机软件及辅助设备、印章材料。（依法须经批准的项目，经相关部门批准后方可开展经营活动）***
+			</jyfw>
+			<kjzdzzDm>102</kjzdzzDm>
+			<kqccsztdjbz>N</kqccsztdjbz>
+			<kyslrq>2015-01-20T00:00:00+08:00</kyslrq>
+			<kzztdjlxDm>1110</kzztdjlxDm>
+			<kzztdjlxmc>单位纳税人税务登记</kzztdjlxmc>
+			<lrrDm>11309000397</lrrDm>
+			<lrrq>2015-01-22 16:30:54</lrrq>
+			<lsswdjyxqq>2015-01-22T00:00:00+08:00</lsswdjyxqq>
+			<lsswdjyxqz>9999-12-31T00:00:00+08:00</lsswdjyxqz>
+			<nsrmc>沧州昊远科技有限公司</nsrmc>
+			<nsrsbh>13090332027908X</nsrsbh>
+			<nsrzgswjgxxList>
+				<zgswjDm>11309030000</zgswjDm>
+				<zgswskfjDm>11309031200</zgswskfjDm>
+				<ssglyDm>11309000451</ssglyDm>
+			</nsrzgswjgxxList>
+			<nsrztDm>03</nsrztDm>
+			<nsrztmc>正常</nsrztmc>
+			<pzsljglxDm>01</pzsljglxDm>
+			<scjydlxdh>13803234682</scjydlxdh>
+			<scjydyzbm>061001</scjydyzbm>
+			<scjydz>河北省沧州市运河区西环北路欣园小区16栋4-602室</scjydz>
+			<scjydzxzqhszDm>130903</scjydzxzqhszDm>
+			<scjydzxzqhszmc>运河区</scjydzxzqhszmc>
+			<scjyqxq>2015-01-20T00:00:00+08:00</scjyqxq>
+			<scjyqxz>2034-01-19T00:00:00+08:00</scjyqxz>
+			<ssdabh>10111309000149514587</ssdabh>
+			<ssglyDm>11309000451</ssglyDm>
+			<swdjblbz>Y</swdjblbz>
+			<whsyjsfjfxxdjbz>N</whsyjsfjfxxdjbz>
+			<wztzbl>0.0</wztzbl>
+			<ygznsrlxDm>22</ygznsrlxDm>
+			<zcdlxdh>13803234682</zcdlxdh>
+			<zcdyzbm>061001</zcdyzbm>
+			<zcdz>河北省沧州市运河区西环北路欣园小区16栋4-602室</zcdz>
+			<zcdzxzqhszDm>130903</zcdzxzqhszDm>
+			<zcdzxzqhszmc>运河区</zcdzxzqhszmc>
+			<zczb>300000.0</zczb>
+			<zfjglxDm>0</zfjglxDm>
+			<zgswjDm>11309030000</zgswjDm>
+			<zgswjmc>河北省沧州市运河区国家税务局</zgswjmc>
+			<zgswskfjDm>11309031200</zgswskfjDm>
+			<zgswskfjmc>沧州市运河区国家税务局第一税务分局</zgswskfjmc>
+			<zrrtzbl>1.0</zrrtzbl>
+			<zzhm>130900000094252</zzhm>
+			<zzjgDm>32027908X</zzjgDm>
+			<zzjglxDm>1</zzjglxDm>
+			<zzlxDm>11</zzlxDm>
+			<zzsqylxDm>2</zzsqylxDm>
+		</djNsrxxVO>
+		<fpPzhdxxGrid>
+			<fpPzhdxxGridlb>
+				<dffpzgkpxeDm>4</dffpzgkpxeDm>
+				<dffpzgkpxe>100000.0</dffpzgkpxe>
+				<xgrq xsi:nil="true" />
+				<hdqcuuid>1E83C7C26DA5016AE0537F0000013FE3</hdqcuuid>
+				<cpzgsl>25.0</cpzgsl>
+				<yxbz>Y</yxbz>
+				<swjgDm>11309031200</swjgDm>
+				<djxh>10111309000126611897</djxh>
+				<myzggpsl>25.0</myzggpsl>
+				<mczggpsl>25.0</mczggpsl>
+				<wtdkbz>N</wtdkbz>
+				<fpzlDm>000008101200</fpzlDm>
+				<fpgpfsDm>1</fpgpfsDm>
+				<yxqq>2015-01-29 00:00:00</yxqq>
+				<yxqz>9999-12-31 00:00:00</yxqz>
+				<xgrDm xsi:nil="true" />
+				<lxkpsx>0</lxkpsx>
+				<lxkpljxe>0.0</lxkpljxe>
+				<fplbDm>8</fplbDm>
+				<tdhyDm>01</tdhyDm>
+				<skbz>N</skbz>
+				<zppzDm>3</zppzDm>
+				<defpbz>N</defpbz>
+				<fpzlmc>增值税普通发票（二联无金额限制版）</fpzlmc>
+				<klgsl>0</klgsl>
+				<jldwDm>0610</jldwDm>
+				<hdrqxx>2015-01-29 14:54:49</hdrqxx>
+				<jebDm>0</jebDm>
+				<defpxebz>N</defpxebz>
+				<fplbmc>特定业务普通发票</fplbmc>
+			</fpPzhdxxGridlb>
+		</fpPzhdxxGrid>
+		<fpPzhdgprxxGrid>
+			<fpPzhdgprxxGridlb>
+				<sfzjhm>130903198003081218</sfzjhm>
+				<xgrq>2015-01-29 14:27:14</xgrq>
+				<yxbz>Y</yxbz>
+				<swjgDm>11309031200</swjgDm>
+				<djxh>10111309000126611897</djxh>
+				<gprqcuuid>1E83EAC743BD0124E0537F000001504C</gprqcuuid>
+				<lxdh>13803234682</lxdh>
+				<sfzjzlDm>201</sfzjzlDm>
+				<yxqq>2015-01-29 00:00:00</yxqq>
+				<lrrDm>11309000397</lrrDm>
+				<gprxm>史清岭</gprxm>
+				<yxqz>9999-12-31 00:00:00</yxqz>
+				<xgrDm>11309000397</xgrDm>
+				<sjgsdq>11309031200</sjgsdq>
+				<lrrq>2015-01-29 14:27:14</lrrq>
+			</fpPzhdgprxxGridlb>
+		</fpPzhdgprxxGrid>
+		<pzhdxxzbVO>
+			<dbje xsi:nil="true" />
+			<fpdblx_dm xsi:nil="true" />
+			<sjgsdq>11309031200</sjgsdq>
+			<djxh>10111309000126611897</djxh>
+			<yxqq>2015-01-29 00:00:00</yxqq>
+			<fpdbbz>N</fpdbbz>
+			<lrrDm xsi:nil="true" />
+			<ljgpje xsi:nil="true" />
+			<pzhdxxuuid>1E83EC246A440012E0537F00000167B1</pzhdxxuuid>
+			<xgrDm xsi:nil="true" />
+			<yxbz xsi:nil="true" />
+			<yxqz>9999-12-31 00:00:00</yxqz>
+		</pzhdxxzbVO>
+		<fpNsrzgxxVO>
+			<dqdensr>N</dqdensr>
+			<fdqzzsybnsr>N</fdqzzsybnsr>
+			<hyfpzkpnsr>N</hyfpzkpnsr>
+			<tdzsbmnsr>N</tdzsbmnsr>
+			<wbbydjnsr>N</wbbydjnsr>
+			<wbbydjsfyx>N</wbbydjsfyx>
+			<zzsybnsr>N</zzsybnsr>
+		</fpNsrzgxxVO>
+		<swjgpzgz>1</swjgpzgz>
+		<fdje>0.0</fdje>
+		<nsrsfzrdBz>Y</nsrsfzrdBz>
+		<sjbnsrBz>N</sjbnsrBz>
+		<xxsmpfqyBz>N</xxsmpfqyBz>
+	</fpPzhdCSHVO>
+</taxML>

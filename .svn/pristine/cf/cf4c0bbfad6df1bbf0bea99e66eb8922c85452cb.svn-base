@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.BCFSXX</tran_id>
+		<channel_id>AHGS.NFWB.TAMZNDT</channel_id>
+		<tran_seq>90399dee409d4b1d9aacc9a8db11cfad</tran_seq>
+		<tran_date>20160329</tran_date>
+		<tran_time>105000019</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>AHGS.NFWB.TAMZNDT</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>13404220600</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>13404220000</value>
+		</expand>
+	</head>
+	<body><![CDATA[]]>
+	</body>
+</service>
+
+
+<taxML xsi:type="HXZGFP00051Request" bbh="String" xmlbh="String"
+	xmlmc="String"
+	xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_HXZG_FP_00051_Request_V1.0.xsd"
+	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<lyVO>
+		<sjgsdq>13404220000</sjgsdq>
+		<djxh>10113404000106547815</djxh>
+		<fplyuuid>270f5cd403ef440486d33ba76fde2f29</fplyuuid>
+		<fpkfDm>B4CB2CF97DF5ADB338DB5B744ED76384</fpkfDm>
+		<sfzjlxDm>100</sfzjlxDm>
+		<gprxm>王如云</gprxm>
+		<lrrDm>13404220600</lrrDm>
+		<slswjgDm>13404220000</slswjgDm>
+		<xgrDm>13404220600</xgrDm>
+		<slrq>2016-03-29</slrq>
+		<slrDm>13404220600</slrDm>
+		<sfzjhm>340402196103110027</sfzjhm>
+	</lyVO>
+	<mxVOList>
+		<mxVOListlb>
+			<sjgsdq>13404220000</sjgsdq>
+			<fpzlDm>1130</fpzlDm>
+			<fpzzhm>02377836</fpzzhm>
+			<fpsl>25</fpsl>
+			<fplymxuuid>cbbce6d83477431c9066d3c8867413fd</fplymxuuid>
+			<wtdkbz>N</wtdkbz>
+			<fpqshm>02377812</fpqshm>
+			<fpDm>3400152130</fpDm>
+			<fplyuuid>270f5cd403ef440486d33ba76fde2f29</fplyuuid>
+			<lrrDm>13404220600</lrrDm>
+			<xgrDm>13404220600</xgrDm>
+			<swjgDm>13404220000</swjgDm>
+			<defpbz></defpbz>
+			<zppzDm>1</zppzDm>
+			<mbfs>1</mbfs>
+			<fpme>0.0</fpme>
+			<zkdklxDm></zkdklxDm>
+			<fplbDm>1</fplbDm>
+			<tdhyDm>00</tdhyDm>
+			<djxh>10113404000106547815</djxh>
+			<phcd>8</phcd>
+			<spryDm>13404220600</spryDm>
+			<sprxm></sprxm>
+			<gprxm>王如云</gprxm>
+			<sprq>2016-03-29</sprq>
+			<swryxm></swryxm>
+			<jldwDm>0610</jldwDm>
+			<fpzg></fpzg>
+			<fpdmmc>增值税专用发票（中文三联）</fpdmmc>
+			<uuid>3403d42e28c34dca80512f9c957cd474</uuid>
+			<gptpsysl>0</gptpsysl>
+			<skbz>N</skbz>
+			<rq>2016-03-29</rq>
+			<swjgmc></swjgmc>
+			<dylxDm></dylxDm>
+			<nsrsbh>340402779086871</nsrsbh>
+			<nsrmc>淮南市舜大化工建材有限公司</nsrmc>
+			<bs>25</bs>
+			<lgsl>25</lgsl>
+		</mxVOListlb>
+	</mxVOList>
+	<tgbz>N</tgbz>
+	<gptpsyje>0</gptpsyje>
+</taxML>

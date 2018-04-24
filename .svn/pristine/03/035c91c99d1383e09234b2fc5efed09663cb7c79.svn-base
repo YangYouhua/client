@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.chinatax.gov.cn/spec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head>
+		<tran_id>SWZJ.HXZG.FP.BCFPTKCZ</tran_id>
+		<channel_id>HEGS.NFWB.WCPT</channel_id>
+		<tran_seq>ebaa193341b445dcbfefd533b7b37cd0</tran_seq>
+		<tran_date>20151018</tran_date>
+		<tran_time>083100024</tran_time>
+		<expand>
+			<name>identityType</name>
+			<value>3327006290056</value>
+		</expand>
+		<expand>
+			<name>sjry</name>
+			<value>14400qydzs0</value>
+		</expand>
+		<expand>
+			<name>sjjg</name>
+			<value>11301022300</value>
+		</expand>
+	</head>
+	<body><![CDATA[]]>
+	</body>
+</service>
+
+
+<taxML xsi:type="HXZGFP00054Request" bbh="String" xmlbh="String"
+	xmlmc="String"
+	xsi:schemaLocation="http://www.chinatax.gov.cn/dataspec/TaxMLBw_HXZG_FP_00054_Request_V1.0.xsd"
+	xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fpTpVO>
+		<sjgsdq>11309031200</sjgsdq>
+		<djxh>10111309000126611897</djxh>
+		<fpkfDm>4E1C3CA8D56F1043DDD66BC6F0FCB76C</fpkfDm>
+		<sqrxm>史清岭</sqrxm>
+		<sqrq>2015-10-18</sqrq>
+		<lrrDm>11309000397</lrrDm>
+		<sqly></sqly>
+		<xgrDm>11309000397</xgrDm>
+		<swjgDm>11309031200</swjgDm>
+		<fptpuuid>5cfe55de86904721892fb0cd015ec136</fptpuuid>
+		<slrq>2015-10-18</slrq>
+		<slrDm>11309000397</slrDm>
+	</fpTpVO>
+	<fpTpMxVOList>
+		<fpTpMxVOListlb>
+			<sjgsdq>11309031200</sjgsdq>
+			<fpzlDm>000008101200</fpzlDm>
+			<fpzzhm>00234579</fpzzhm>
+			<fpsl>1</fpsl>
+			<fpqshm>00234579</fpqshm>
+			<fpDm>1300054620</fpDm>
+			<lrrDm>11309000397</lrrDm>
+			<fptpmxuuid>42c3343900f54791b94e76fe97e408d3</fptpmxuuid>
+			<xgrDm>11309000397</xgrDm>
+			<fptpuuid>5cfe55de86904721892fb0cd015ec136</fptpuuid>
+			<bs>1</bs>
+			<defpbz>N</defpbz>
+			<zppzDm>3</zppzDm>
+			<fplbDm>1</fplbDm>
+			<tdhyDm>00</tdhyDm>
+			<skbz>N</skbz>
+			<mbfs>1</mbfs>
+			<fpme>0</fpme>
+			<rq>2015-10-18</rq>
+			<swjgmc></swjgmc>
+			<dylxDm>99</dylxDm>
+			<fpdmmc>增值税普通发票（二联无金额限制版）</fpdmmc>
+			<sqrxm>史清岭</sqrxm>
+			<slrq>2015-10-18</slrq>
+			<slrDm>11309000397</slrDm>
+			<swryxm></swryxm>
+			<jldwDm>0610</jldwDm>
+			<fpzg></fpzg>
+			<uuid>9ca2757ee71d47e88630de175f42c754</uuid>
+			<djxh>10111309000126611897</djxh>
+			<phcd>8</phcd>
+			<lgsl>1</lgsl>
+		</fpTpMxVOListlb>
+	</fpTpMxVOList>
+</taxML>

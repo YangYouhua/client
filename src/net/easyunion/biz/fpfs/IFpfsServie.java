@@ -2,7 +2,6 @@ package net.easyunion.biz.fpfs;
 
 import java.util.List;
 import java.util.Map;
-
 import net.easyunion.biz.fpfs.vo.BsxxVo;
 import net.easyunion.biz.fpfs.vo.GpResultVo;
 import net.easyunion.biz.fpfs.vo.GpxxVo;
@@ -11,7 +10,6 @@ import net.easyunion.biz.fpfs.vo.SaveGpxxVo;
 import net.easyunion.biz.fpfs.vo.TpResultVo;
 import net.easyunion.biz.fpfs.vo.TpxxVo;
 import net.easyunion.biz.fpfs.vo.YjResultVo;
-import net.easyunion.biz.fpfs.vo.YjxxVo;
 
 public interface IFpfsServie {
 	
@@ -71,5 +69,54 @@ public interface IFpfsServie {
 	 * @return
 	 */
 	public List<Map<String, Object>> getSwjgKf(String swjgDm);
+	
+	/**
+	 * 获取纳税人结存信息
+	 * @param djxh
+	 * @return
+	 */
+	public String getNsrJcxx(String djxh);
+	
+	/**
+	 * 获取纳税人登记序号
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getDjxh(String djxh);
+
+	/**
+	 * 获取纳税人状态代码
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getNsrzt(String djxh);
+	
+	/**
+	 * 风险纳税人判断
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getFxnsr(String nsrsbh);
+	
+	/**
+	 * 欠税企业判断
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getQsqy(String nsrsbh);
+	
+	/**
+	 * 违法违章企业判断
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getWfwz(String nsrsbh);
+	
+	/**
+	 * 实名制判断
+	 * @param swjgDm
+	 * @return
+	 */
+	public List<Map<String, Object>> getSmz(String nsrsbh);
 	
 }

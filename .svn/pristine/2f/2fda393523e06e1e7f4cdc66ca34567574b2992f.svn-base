@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxML xsi:type="HXZGFP05048Response" xmlns="http://www.chinatax.gov.cn/dataspec/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<swjgkfkcVOList>
+		<swjgkfkcVOListlb>
+			<fpzlDm>000008101200</fpzlDm>
+			<sjgsdq xsi:nil="true" />
+			<fpkfDm>4E1C3CA8D56F1043DDD66BC6F0FCB76C</fpkfDm>
+			<fpzzhm>00234666</fpzzhm>
+			<xzzhm xsi:nil="true" />
+			<xqshm xsi:nil="true" />
+			<fpDm>1300054620</fpDm>
+			<fpqshm>00234567</fpqshm>
+			<bs>100</bs>
+			<xs xsi:nil="true" />
+			<kfkcuuid xsi:nil="true" />
+			<lrrDm xsi:nil="true" />
+			<fpztDm>20</fpztDm>
+			<xgrDm xsi:nil="true" />
+			<swjgDm xsi:nil="true" />
+			<mbfs>1.0</mbfs>
+			<kcfs>100.0</kcfs>
+			<fpdmmc>增值税普通发票电脑版（二联）</fpdmmc>
+			<phcd>8</phcd>
+			<fpme>0.0</fpme>
+			<jldwDm>0610</jldwDm>
+			<fpzlmc>增值税普通发票（二联无金额限制版）</fpzlmc>
+			<je>0.0</je>
+			<fpxj>0.35</fpxj>
+			<fpjj>0.35</fpjj>
+			<yspc>4</yspc>
+		</swjgkfkcVOListlb>
+	</swjgkfkcVOList>
+</taxML>
